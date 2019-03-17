@@ -7,15 +7,12 @@
     vertical-align: baseline;
     background: transparent;
 }
-
 html {
     font-family: 'PT Sans', sans-serif;
 }
-
 body {
     background-color: #F5F5F5;
 }
-
 .top-bar {
     height: 250px;
     background-image: url("img/bg-flliped.jpg");
@@ -24,7 +21,6 @@ body {
     background-size: cover;
     position: relative;
 }
-
 .menu {
     display: flex;
     justify-content: flex-end;
@@ -32,7 +28,6 @@ body {
     padding-top: 48px;
     padding-right: 75px;
 }
-
 .menu button {
     display: block;
     text-decoration: none;
@@ -40,194 +35,150 @@ body {
     font-size: 22px;
     margin-right: 65px;
 }
-
 .lgnButton:hover {
     color: #eaeaea;
 }
-
 .sgnButton {
     background-color: #0E6C8E;
     padding: 8px 24px;
     border-radius: 10px;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 }
-
 .sgnButton:hover {
     background-color: #0C5D7A;
 }
-
 .modal {
     display: none;
     position: fixed;
     z-index: 1;
-
     left: 0;
     top: 0;
-
     width: 100%;
     height: 100%;
     overflow: auto;
-
     background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
 }
-
 .modal-content {
     background-color: white;
     margin: 5% auto 15% auto;
     width: 24%;
-
     border-radius: 10px;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 }
-
 .account-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     position: relative;
-
     padding: 24px 24px;
 }
-
 .account-form a {
     margin-top: 48px;
     text-decoration: none;
     font-size: 16px;
     color: rgba(0,0,0,0.5);
 }
-
 .account-form a:hover {
     color: #0E6C8E;
 }
-
 .close-button {
     font-size: 40px;
     font-weight: 700;
     color: rgba(0,0,0,0.4);
-
     cursor: pointer;
     position: absolute;
     right: 24px;
     top: 0;
 }
-
 .close-button:hover {
     color: #0E6C8E;
 }
-
 .form-title {
     display: block;
     width: 100%;
     font-size: 42px;
     font-weight: 700;
     text-align: center;
-
     margin: 24px 0;
-
     color: #0E6C8E;
 }
-
 .form-field {
     display: block;
     width: 240px;
     height: 48px;
-
     margin: 12px 0;
     background-color: white;
     border: none;
     border-radius: 10px;
     border: 2px solid white;
-
     font-size: 16px;
     font-weight: 700;
     color:#4d4d4d;
     padding-left: 12px;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-} 
-
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+}
 .form-field::placeholder {
     color: rgba(0,0,0,0.3);
 }
-
 .form-field:focus {
-    border: 2px solid #0E6C8E; 
+    border: 2px solid #0E6C8E;
 }
-
 .form-img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-
     margin-bottom: 24px;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 }
-
 .form-button {
     margin-top: 24px;
     margin-bottom: 12px;
     display: block;
-
     cursor: pointer;
-
     color: white;
     font-size: 16px;
     font-weight: 700;
-
     border-radius: 10px;
     background-color: #0E6C8E;
-    padding: 12px 20px; 
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
+    padding: 12px 20px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 }
-
 .form-button:hover {
     background-color: #0C5D7A;
 }
-
 .menu:hover .dropdown-content {
     display: block;
 }
-
 .lgnButton {
     text-shadow: 0px 1px 3px rgba(0,0,0,0.2);
 }
-
 .container {
     margin: 0 auto;
     width: 70%;
 }
-
 .search-bar {
     display: block;
     position: relative;
     top: -64px;
     height: 128px;
     background-color: white;
-
     border-radius: 10pt;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 }
-
 .search-bar-container {
     display: flex;
     height: 100%;
@@ -235,23 +186,20 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .search-bar-box {
     display: block;
     width: 340px;
     margin: 0 18px;
     height: 50px;
     background-color: white;
-    border: 3px solid #0E6C8E;;
-
+    border: 3px solid #0E6C8E;
+   ;
     border-radius: 10px;
     position: relative;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 }
-
 .search-bar-box img {
     position: absolute;
     margin-top: 12px;
@@ -260,17 +208,14 @@ body {
     height: 26px;
     opacity: 0.2;
 }
-
 .search-bar-box .input {
     font-size: 20px;
     color: #4B4B4B;
-
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .search-bar-button {
     display: block;
     color: white;
@@ -280,58 +225,46 @@ body {
     font-size: 22px;
     font-weight: 700;
     text-align: center;
-
     padding: 12px 20px;
     border-radius: 10px;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 }
-
 .search-bar-button:hover {
     background-color: #0C5D7A;
 }
-
 .container-body {
     display: flex;
     margin-bottom: 192px;
 }
-
 .container-body .left-side {
     display: flex;
     flex-direction: column;
     flex: 1 20%;
 }
-
 .container-body .left-side .category {
     display: block;
     background-color: white;
-
     border-radius: 10px;
     margin-bottom: 24px;
     margin-right: 24px;
-
     padding: 24px;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 }
-
 .container-body .left-side .category .title {
     font-size: 20px;
     font-weight: 700;
     color: #4B4B4B;
 }
-
 .container-body .left-side .category .options {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     margin-top: 12px;
 }
-
 /* Customize the label (the container) */
 .checkbox-container {
     display: block;
@@ -345,9 +278,8 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  /* Hide the browser's default checkbox */
+}
+/* Hide the browser's default checkbox */
 .checkbox-container input {
     position: absolute;
     opacity: 0;
@@ -355,8 +287,7 @@ body {
     height: 0;
     width: 0;
 }
-  
-  /* Create a custom checkbox */
+/* Create a custom checkbox */
 .checkmark {
     position: absolute;
     top: 2px;
@@ -366,151 +297,118 @@ body {
     border-radius: 4px;
     border: 1px solid #C9C9C9;
 }
-  
-  /* On mouse-over, add a grey background color */
+/* On mouse-over, add a grey background color */
 .checkbox-container:hover input ~ .checkmark {
     background-color: rgb(238, 238, 238);
-  }
-  
-  /* When the checkbox is checked, add a blue background */
+}
+/* When the checkbox is checked, add a blue background */
 .checkbox-container input:checked ~ .checkmark {
     background-color: #0E6C8E;
     border: 1px solid #0E6C8E;
 }
-
 .container-body .right-side {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 24px;
     grid-row-gap: 24px;
     grid-auto-rows: auto;
-
     margin-left: 24px;
-
     flex: 2 70%;
 }
-
 .container-body .right-side .trip {
     border-radius: 10px;
     height: 350px;
-
     background: url("img/hotel.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-
     position: relative;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 }
-
 .container-body .right-side .trip .info {
     background-color: white;
-
     width: 80%;
     height: 175px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding-top: 12px;
     padding-bottom: 12px;
-
     position: absolute;
     bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
-
     border-radius: 10px;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 }
-
 .container-body .right-side .trip .info .title {
     font-size: 22px;
     font-weight: 700;
     color: #4B4B4B;
 }
-
 .container-body .right-side .trip .info .rating {
     display: flex;
     margin-top: 8px;
 }
-
 .container-body .right-side .trip .info .rating img {
     width: 20px;
     height: 20px;
     margin: 0 2px;
 }
-
 .container-body .right-side .trip .info .price {
     font-size: 24px;
     font-weight: 700;
     color: #99E000;
-
     margin-top: 24px;
 }
-
 .container-body .right-side .trip .info .stats {
     display: flex;
     margin-top: 24px;
 }
-
 .container-body .right-side .trip .info .stats .stats-button {
     margin: 0 12px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .container-body .right-side .trip .info .stats .stats-button img {
     opacity: 0.8;
     margin-right: 10px;
     width: 18px;
     height: 18px;
 }
-  
 .container-body .right-side .trip .info .stats .stats-button .text {
-  display: block;
-  text-align: left;
-  font-weight: 700;
-  font-size: 18px;
-  color: black;
-  opacity: 0.8;
+    display: block;
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+    opacity: 0.8;
 }
-
 footer {
     display: block;
     width: 100%;
-
     padding: 24px 0;
-
     background-color: #0E6C8E;
 }
-
 .container-footer {
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
 }
-
 .item {
     display: flex;
     flex-direction: column;
-
     margin: 24px 48px;
 }
-
 .item ul {
     list-style: none;
     display: flex;
 }
-
 .item ul li {
     display: flex;
     flex-direction: column;
@@ -518,60 +416,46 @@ footer {
     align-items: flex-start;
     margin-right: 64px;
 }
-
 .item ul li .name {
     text-align: center;
     font-size: 20px;
     font-weight: 700;
     color: white;
 }
-
 .item ul li .email {
     font-size: 18px;
     margin-top: 8px;
     color: white;
 }
-
 .item a {
     display: block;
     width: 64px;
     height: 64px;
-
     background-color: #0C5D7A;
-
     border-radius: 10px;
-
-    box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-    -webkit-box-shadow:  0px 1px 3px  rgba(0,0,0,0.20);
-    -moz-box-shadow: 0px 1px 3px  rgba(0,0,0,0.20);
-
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .item a:hover {
     background-color: rgb(10, 79, 104);
-
 }
-
 .item a img {
     border-radius: 50%;
     width: 60%;
     height: 60%;
 }
-
 .item .title {
     font-size: 32px;
     font-weight: 700;
     color: white;
     margin-bottom: 12px;
 }
-
 .item .description {
     width: 350px;
     font-size: 18px;
     color: white;
 }
-
-

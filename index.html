@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
+
 <body>
 
     <div class="top-bar">
         <div class="menu">
             <button onclick="document.getElementById('signup').style.display='block'" class="sgnButton">Sign Up</button>
-            <button onclick="document.getElementById('login').style.display='block'" class="lgnButton">Log In</button>            
+            <button onclick="document.getElementById('login').style.display='block'" class="lgnButton">Log In</button>
         </div>
     </div>
 
@@ -22,8 +24,8 @@
         <div class="modal-content">
             <form class="account-form" name="loginForm">
                 <span onclick="document.getElementById('login').style.display='none'" class="close-button">&times;</span>
-                <div class="form-title">Welcome back!</div>   
-                <img class="form-img" src="img/icons/user.png" alt="user"> 
+                <div class="form-title">Welcome back!</div>
+                <img class="form-img" src="img/icons/user.png" alt="user">
                 <input class="form-field" type="text" name="username" placeholder="Username">
                 <input class="form-field" type="password" name="password" placeholder="Password">
                 <button class="form-button" type="submit">Log In</button>
@@ -33,36 +35,36 @@
     </div>
 
     <div id="signup" class="modal">
-            <div class="modal-content">
-                <form class="account-form" name="signupForm">
-                    <span onclick="document.getElementById('signup').style.display='none'" class="close-button">&times;</span>
-                    <div class="form-title">Nice to meet you!</div>   
-                    <img class="form-img" src="img/icons/user.png" alt="user"> 
-                    <input class="form-field" type="text" name="username" placeholder="Username">
-                    <input class="form-field" type="password" name="password" placeholder="Password">
-                    <input class="form-field" type="password" name="password" placeholder="Confirm password">
-                    <button class="form-button" type="submit">Sign Up</button>
-                    <a href="#">Already have an account?</a>
-                </form>
-            </div>
+        <div class="modal-content">
+            <form class="account-form" name="signupForm">
+                <span onclick="document.getElementById('signup').style.display='none'" class="close-button">&times;</span>
+                <div class="form-title">Nice to meet you!</div>
+                <img class="form-img" src="img/icons/user.png" alt="user">
+                <input class="form-field" type="text" name="username" placeholder="Username">
+                <input class="form-field" type="password" name="password" placeholder="Password">
+                <input class="form-field" type="password" name="password" placeholder="Confirm password">
+                <button class="form-button" type="submit">Sign Up</button>
+                <a href="#">Already have an account?</a>
+            </form>
+        </div>
     </div>
 
     <div class="container">
         <div class="search-bar">
             <div class="search-bar-container">
-                    <div class="search-bar-box">
-                        <img src="img/icons/location.svg" alt="location">
-                        <div class="input">Where are you going?</div>
-                    </div>
-                    <div class="search-bar-box">
-                        <img src="img/icons/calendar.svg" alt="location">
-                        <div class="input">Where are you going?</div>
-                    </div>
-                    <div class="search-bar-box">
-                        <img src="img/icons/person.svg" alt="location">
-                        <div class="input">Where are you going?</div>
-                    </div>
-                    <div class="search-bar-button">SEARCH</div>
+                <div class="search-bar-box">
+                    <img src="img/icons/location.svg" alt="location">
+                    <div class="input">Where are you going?</div>
+                </div>
+                <div class="search-bar-box">
+                    <img src="img/icons/calendar.svg" alt="location">
+                    <div class="input">Where are you going?</div>
+                </div>
+                <div class="search-bar-box">
+                    <img src="img/icons/person.svg" alt="location">
+                    <div class="input">Where are you going?</div>
+                </div>
+                <div class="search-bar-button">SEARCH</div>
             </div>
         </div>
 
@@ -86,39 +88,39 @@
                     </div>
                 </div>
                 <div class="category">
-                        <div class="title">Category #1</div>
-                        <div class="options">
-                            <label class="checkbox-container">Item #1
+                    <div class="title">Category #1</div>
+                    <div class="options">
+                        <label class="checkbox-container">Item #1
                                 <input type="checkbox" >
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="checkbox-container">Item #2
+                        <label class="checkbox-container">Item #2
                                 <input type="checkbox" >
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="checkbox-container">Item #3
+                        <label class="checkbox-container">Item #3
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                        </div>
+                    </div>
                 </div>
                 <div class="category">
-                        <div class="title">Category #1</div>
-                        <div class="options">
-                            <label class="checkbox-container">Item #1
+                    <div class="title">Category #1</div>
+                    <div class="options">
+                        <label class="checkbox-container">Item #1
                                 <input type="checkbox" >
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="checkbox-container">Item #2
+                        <label class="checkbox-container">Item #2
                                 <input type="checkbox" >
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="checkbox-container">Item #3
+                        <label class="checkbox-container">Item #3
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                        </div>
-                </div>    
+                    </div>
+                </div>
             </div>
             <div class="right-side">
                 <div class="trip">
@@ -144,28 +146,6 @@
                 </div>
 
                 <div class="trip">
-                        <div class="info">
-                            <div class="title">Hotel Name</div>
-                            <div class="rating">
-                                <img src="img/icons/star.png" alt="star">
-                                <img src="img/icons/star.png" alt="star">
-                                <img src="img/icons/star.png" alt="star">
-                            </div>
-                            <div class="price">&euro;1000</div>
-                            <div class="stats">
-                                <div class="stats-button">
-                                    <img src="img/icons/like.svg" alt="like">
-                                    <div class="text">50</div>
-                                </div>
-                                <div class="stats-button">
-                                    <img src="img/icons/dislike.svg" alt="like">
-                                    <div class="text">50</div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-
-                <div class="trip">
                     <div class="info">
                         <div class="title">Hotel Name</div>
                         <div class="rating">
@@ -210,25 +190,47 @@
                 </div>
 
                 <div class="trip">
-                        <div class="info">
-                            <div class="title">Hotel Name</div>
-                            <div class="rating">
-                                <img src="img/icons/star.png" alt="star">
-                                <img src="img/icons/star.png" alt="star">
-                                <img src="img/icons/star.png" alt="star">
+                    <div class="info">
+                        <div class="title">Hotel Name</div>
+                        <div class="rating">
+                            <img src="img/icons/star.png" alt="star">
+                            <img src="img/icons/star.png" alt="star">
+                            <img src="img/icons/star.png" alt="star">
+                        </div>
+                        <div class="price">&euro;1000</div>
+                        <div class="stats">
+                            <div class="stats-button">
+                                <img src="img/icons/like.svg" alt="like">
+                                <div class="text">50</div>
                             </div>
-                            <div class="price">&euro;1000</div>
-                            <div class="stats">
-                                <div class="stats-button">
-                                    <img src="img/icons/like.svg" alt="like">
-                                    <div class="text">50</div>
-                                </div>
-                                <div class="stats-button">
-                                    <img src="img/icons/dislike.svg" alt="like">
-                                    <div class="text">50</div>
-                                </div>
+                            <div class="stats-button">
+                                <img src="img/icons/dislike.svg" alt="like">
+                                <div class="text">50</div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="trip">
+                    <div class="info">
+                        <div class="title">Hotel Name</div>
+                        <div class="rating">
+                            <img src="img/icons/star.png" alt="star">
+                            <img src="img/icons/star.png" alt="star">
+                            <img src="img/icons/star.png" alt="star">
+                        </div>
+                        <div class="price">&euro;1000</div>
+                        <div class="stats">
+                            <div class="stats-button">
+                                <img src="img/icons/like.svg" alt="like">
+                                <div class="text">50</div>
+                            </div>
+                            <div class="stats-button">
+                                <img src="img/icons/dislike.svg" alt="like">
+                                <div class="text">50</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="trip">
@@ -300,6 +302,7 @@
             }
         }
     </script>
-    
+
 </body>
+
 </html>
