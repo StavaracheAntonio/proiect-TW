@@ -14,23 +14,40 @@
 <body>
 
     <div class="top-bar">
-        <div class="menu">
+        <div id="menu1" class="menu">
             <button onclick="document.getElementById('signup').style.display='block'" class="sgnButton">Sign Up</button>
-            <button onclick="document.getElementById('login').style.display='block'" class="lgnButton">Log In</button>
+            <button onclick="document.getElementById('login').style.display='block';
+                             document.getElementById('menu1').style.display='none'" class="lgnButton">Log In</button>
+        </div>
+        <div id="menu2" class="menu">
+            <img src="img/icons/user.png" alt="user">
+            <div class="user-menu">
+                <button onclick="document.getElementById('user-drop').style.display='block'" class="userButton">Andrei Raducanu</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="user-drop">
+        <div class="menu">
+            <a href="#">Profile</a>
+            <a href="#">History</a>
+            <a href="#">Sign out</a>
         </div>
     </div>
 
     <div id="login" class="modal">
         <div class="modal-content">
-            <form class="account-form" name="loginForm">
+            <!-- change to form -->
+            <div class="account-form" name="loginForm">
                 <span onclick="document.getElementById('login').style.display='none'" class="close-button">&times;</span>
                 <div class="form-title">Welcome back!</div>
                 <img class="form-img" src="img/icons/user.png" alt="user">
                 <input class="form-field" type="text" name="username" placeholder="Username">
                 <input class="form-field" type="password" name="password" placeholder="Password">
-                <button class="form-button" type="submit">Log In</button>
+                <button onclick="document.getElementById('menu2').style.display='flex';
+                                 document.getElementById('login').style.display='none'" class="form-button" type="submit">Log In</button>
                 <a href="#">Forgot Username/ Password?</a>
-            </form>
+            </div>
         </div>
     </div>
 
@@ -291,6 +308,7 @@
     <script>
         var modal1 = document.getElementById('login');
         var modal2 = document.getElementById('signup');
+        var userdrop = document.getElementById('user-drop');
 
         window.onclick = function(event) {
             if(event.target == modal1) {
@@ -299,6 +317,10 @@
 
             if(event.target == modal2) {
                 modal2.style.display = 'none';
+            }
+
+            if(event.target == userdrop) {
+                userdrop.style.display = 'none';
             }
         }
     </script>
