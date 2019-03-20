@@ -144,6 +144,7 @@ p {
 /* END USER MENU */
 
 
+
 /* ACCOUNT FORM */
 .modal {
     display: none;
@@ -395,15 +396,13 @@ p {
     position: relative;
     padding-left: 24px;
     margin-bottom: 8px;
+    font-weight: normal;
+    font-size: 1.125em;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-.checkbox-container h4 {
-    font-weight: normal;
 }
 
 .checkbox-container input {
@@ -413,7 +412,6 @@ p {
     height: 0;
     width: 0;
 }
-
 
 .checkmark {
     position: absolute;
