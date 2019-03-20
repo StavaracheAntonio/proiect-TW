@@ -1,0 +1,188 @@
+
+.hotel_container{
+	display : flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.hotel_container .presentation_image{
+	position: relative;
+    width:75%;
+    height:auto;
+    margin-top:0%;
+    border-radius:3%;
+    height:auto;
+    flex: 1 1 auto;
+
+}
+
+
+}
+
+.hotel_container .hotel_description{
+	flex: 2 1 auto;
+	margin-bottom:5%;
+	
+    
+}
+
+.hotel_description  {
+	font-size: 90%;
+	margin-top: -2%;
+	margin-right: 2%;
+}
+
+.hotel_description > h1:hover{
+
+	transform: scale(1.1);
+
+}
+
+.hotel_description > p:hover{
+
+	transform: scale(1.2);
+
+}
+.hotel_description >p {
+	font-size: 85%;
+}
+
+.rating_stars{
+	display: flex;
+	position: absolute;
+	margin-top:-2%; 
+	margin-left:5%;
+}
+
+.rating_stars h1{
+	font-size: 150%;
+	margin-right: 20px;
+}
+
+.book_me_sign{
+	margin-right: -30%;
+}
+
+.star{
+	display: flex;
+	width: 100%;
+}
+
+
+.star-img{
+	width: 20%;
+	display: flex;
+}
+
+
+
+.book{
+	display: flex;
+	width: 100%;
+	margin-left: 200px;
+	margin-right: -50px;
+}
+
+.hystory-content{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.hystory-searches{
+	flex: 2 1 auto;
+	text-align: center;
+	background-color: #0E6C8E;
+	border-radius: 3.5%; 
+	height:350px;
+	width:30px;
+	margin-right: 5%;
+
+}
+
+.avatar-and-info{
+	flex: 1 1 auto;
+	text-align: center;
+	margin-left:5%;
+	
+}
+
+
+
+.avatar{
+	font-size: 300%;
+	margin-bottom: 7%;
+	font-color:#0E6C8E;
+	color:#0E6C8E;
+}
+
+.image-profile{
+	width:  20%;
+	height: auto;
+}
+
+.name{
+	font-size: 150%;
+	font-color:#0E6C8E;
+	margin-top: 3%;
+	color:#0E6C8E;
+
+
+}
+
+.hystory-searches > h1{
+	margin-top: 20px;
+	margin-bottom: 80px;
+	color:white;
+	font-size:250%;
+}
+
+.hystory-searches > h6{
+	
+	margin-bottom: 10px;
+	color:white;
+	font-size:100%;
+}
+
+
+.recommandations{
+	flex: 2 1 auto;
+	text-align: center;
+	background-color: #0E6C8E;
+	border-radius: 3.5%; 
+	height:350px;
+	width:30px;
+	margin-right: 5%;
+
+}
+
+.recommandations > h1{
+	margin-top: 20px;
+	margin-bottom: 30px;
+	color:white;
+	font-size:250%;
+}
+
+.recommandations > h6{
+	
+	margin-bottom: 10px;
+	color:white;
+	font-size:100%;
+}
+
+ h6:hover{
+	
+	transform: scale(1.1);
+}
+
+.search-bar-button:hover{
+	transform: scale(1.1);
+}
+
+
+
+
