@@ -81,7 +81,8 @@
         </div>
 
         <div class="container-body">
-            <div class="container-body-left">
+            <button id="mobile-category" class="category-card shadow">Filters</button>
+            <div id="filters" class="container-body-left">
                 <div class="category-card shadow">
                     <h4>Category #1</h4>
                     <div class="options">
@@ -298,6 +299,7 @@
         var modal1 = document.getElementById('login');
         var modal2 = document.getElementById('signup');
         var userdrop = document.getElementById('user-menu');
+        var filtbutton = document.getElementById('mobile-category');
 
         window.onclick = function(event) {
             if(event.target == modal1) {
@@ -311,6 +313,16 @@
             if(event.target == userdrop) {
                 userdrop.style.display = 'none';
             }
+
+            if(event.target == filtbutton) {
+                var filters = document.getElementById('filters');
+
+                if(filters.style.display == 'none')
+                    filters.style.display = 'flex';
+                else
+                    filters.style.display = 'none';
+            }
+            
         }
     </script>
 
