@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -12,23 +12,20 @@
 </head>
 
 <body>
-
     <div class="top-bar">
         <div id="menu1" class="menu">
-            <button onclick="document.getElementById('signup').style.display='block'" class="sgnButton">Sign Up</button>
+            <button onclick="document.getElementById('signup').style.display='block'" class="button shadow">Sign Up</button>
             <button onclick="document.getElementById('login').style.display='block';
-                             document.getElementById('menu1').style.display='none'" class="lgnButton">Log In</button>
+                             document.getElementById('menu1').style.display='none'" class="button-normal">Log In</button>
         </div>
         <div id="menu2" class="menu">
-            <img src="img/icons/user.png" alt="user">
-            <div class="user-menu">
-                <button onclick="document.getElementById('user-drop').style.display='block'" class="userButton">Andrei Raducanu</button>
-            </div>
+            <img class="shadow" src="img/icons/user.png" alt="user">
+            <button onclick="document.getElementById('user-menu').style.display='block'" class="button-normal">Andrei Raducanu</button>
         </div>
     </div>
 
-    <div id="user-drop">
-        <div class="menu">
+    <div id="user-menu" class="modal">
+        <div class="user-menu-content shadow">
             <a href="#">Profile</a>
             <a href="#">History</a>
             <a href="#">Sign out</a>
@@ -36,237 +33,235 @@
     </div>
 
     <div id="login" class="modal">
-        <div class="modal-content">
+        <div class="modal-content shadow">
             <!-- change to form -->
             <div class="account-form" name="loginForm">
                 <span onclick="document.getElementById('login').style.display='none'" class="close-button">&times;</span>
-                <div class="form-title">Welcome back!</div>
-                <img class="form-img" src="img/icons/user.png" alt="user">
-                <input class="form-field" type="text" name="username" placeholder="Username">
-                <input class="form-field" type="password" name="password" placeholder="Password">
+                <h2>Welcome back!</h2>
+                <img class="shadow" src="img/icons/user.png" alt="user">
+                <input class="form-field shadow" type="text" name="username" placeholder="Username">
+                <input class="form-field shadow" type="password" name="password" placeholder="Password">
                 <button onclick="document.getElementById('menu2').style.display='flex';
-                                 document.getElementById('login').style.display='none'" class="form-button" type="submit">Log In</button>
+                                 document.getElementById('login').style.display='none'" class="shadow" type="submit">Log In</button>
                 <a href="#">Forgot Username/ Password?</a>
             </div>
         </div>
     </div>
 
     <div id="signup" class="modal">
-        <div class="modal-content">
+        <div class="modal-content shadow">
             <form class="account-form" name="signupForm">
                 <span onclick="document.getElementById('signup').style.display='none'" class="close-button">&times;</span>
-                <div class="form-title">Nice to meet you!</div>
-                <img class="form-img" src="img/icons/user.png" alt="user">
-                <input class="form-field" type="text" name="username" placeholder="Username">
-                <input class="form-field" type="password" name="password" placeholder="Password">
-                <input class="form-field" type="password" name="password" placeholder="Confirm password">
-                <button class="form-button" type="submit">Sign Up</button>
+                <h2>Nice to meet you!</h2>
+                <img class="shadow" src="img/icons/user.png" alt="user">
+                <input class="form-field shadow" type="text" name="username" placeholder="Username">
+                <input class="form-field shadow" type="password" name="password" placeholder="Password">
+                <input class="form-field shadow" type="password" name="password" placeholder="Confirm password">
+                <button class="shadow" type="submit">Sign Up</button>
                 <a href="#">Already have an account?</a>
             </form>
         </div>
     </div>
 
     <div class="container">
-        <div class="search-bar">
-            <div class="search-bar-container">
-                <div class="search-bar-box">
-                    <img src="img/icons/location.svg" alt="location">
-                    <div class="input">Where are you going?</div>
-                </div>
-                <div class="search-bar-box">
-                    <img src="img/icons/calendar.svg" alt="location">
-                    <div class="input">Where are you going?</div>
-                </div>
-                <div class="search-bar-box">
-                    <img src="img/icons/person.svg" alt="location">
-                    <div class="input">Where are you going?</div>
-                </div>
-                <div class="search-bar-button">SEARCH</div>
+        <div class="search-bar shadow">
+            <div class="search-bar-box shadow">
+                <img src="img/icons/location.svg" alt="location">
+                <input type="text" placeholder="Where are you going?">
             </div>
+            <div class="search-bar-box shadow">
+                <img src="img/icons/calendar.svg" alt="location">
+                Check-in - Check-out
+            </div>
+            <div class="search-bar-box shadow">
+                <img src="img/icons/person.svg" alt="location">
+
+            </div>
+            <div class="search-bar-button shadow">SEARCH</div>
         </div>
 
         <div class="container-body">
-            <div class="left-side">
-                <div class="category">
-                    <div class="title">Category #1</div>
+            <div class="container-body-left">
+                <div class="category-card shadow">
+                    <h4>Category #1</h4>
                     <div class="options">
-                        <label class="checkbox-container">Item #1
+                        <label class="checkbox-container"><h4>Item #1</h4>
                             <input type="checkbox" >
                             <span class="checkmark"></span>
                         </label>
-                        <label class="checkbox-container">Item #2
+                        <label class="checkbox-container"><h4>Item #2</h4>
                                 <input type="checkbox" >
                                 <span class="checkmark"></span>
                         </label>
-                        <label class="checkbox-container">Item #3
+                        <label class="checkbox-container"><h4>Item #3</h4>
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                         </label>
                     </div>
                 </div>
-                <div class="category">
-                    <div class="title">Category #1</div>
+                <div class="category-card shadow">
+                    <h4>Category #1</h4>
                     <div class="options">
-                        <label class="checkbox-container">Item #1
+                        <label class="checkbox-container"><h4>Item #1</h4>
                                 <input type="checkbox" >
                                 <span class="checkmark"></span>
                             </label>
-                        <label class="checkbox-container">Item #2
+                        <label class="checkbox-container"><h4>Item #2</h4>
                                 <input type="checkbox" >
                                 <span class="checkmark"></span>
                             </label>
-                        <label class="checkbox-container">Item #3
+                        <label class="checkbox-container"><h4>Item #3</h4>
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
                     </div>
                 </div>
-                <div class="category">
-                    <div class="title">Category #1</div>
+                <div class="category-card shadow">
+                    <h4>Category #1</h4>
                     <div class="options">
-                        <label class="checkbox-container">Item #1
+                        <label class="checkbox-container"><h4><h4>Item #1</h4></h4>
                                 <input type="checkbox" >
                                 <span class="checkmark"></span>
                             </label>
-                        <label class="checkbox-container">Item #2
+                        <label class="checkbox-container"><h4>Item #2</h4>
                                 <input type="checkbox" >
                                 <span class="checkmark"></span>
                             </label>
-                        <label class="checkbox-container">Item #3
+                        <label class="checkbox-container"><h4>Item #3</h4>
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
                     </div>
                 </div>
             </div>
-            <div class="right-side">
-                <div class="trip">
-                    <div class="info">
-                        <div class="title">Hotel Name</div>
+            <div class="container-body-right">
+                <div class="trip-card shadow">
+                    <div class="trip-card-panel shadow">
+                        <h4>Hotel Name</h4>
                         <div class="rating">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                         </div>
-                        <div class="price">&euro;1000</div>
+                        <h2 class="price">&euro;1000</h2>
                         <div class="stats">
                             <div class="stats-button">
                                 <img src="img/icons/like.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                             <div class="stats-button">
                                 <img src="img/icons/dislike.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="trip">
-                    <div class="info">
-                        <div class="title">Hotel Name</div>
+                <div class="trip-card shadow">
+                    <div class="trip-card-panel shadow">
+                        <h4>Hotel Name</h4>
                         <div class="rating">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                         </div>
-                        <div class="price">&euro;1000</div>
+                        <h2 class="price">&euro;1000</h2>
                         <div class="stats">
                             <div class="stats-button">
                                 <img src="img/icons/like.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                             <div class="stats-button">
                                 <img src="img/icons/dislike.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="trip">
-                    <div class="info">
-                        <div class="title">Hotel Name</div>
+                <div class="trip-card shadow">
+                    <div class="trip-card-panel shadow">
+                        <h4>Hotel Name</h4>
                         <div class="rating">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                         </div>
-                        <div class="price">&euro;1000</div>
+                        <h2 class="price">&euro;1000</h2>
                         <div class="stats">
                             <div class="stats-button">
                                 <img src="img/icons/like.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                             <div class="stats-button">
                                 <img src="img/icons/dislike.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="trip">
-                    <div class="info">
-                        <div class="title">Hotel Name</div>
+                <div class="trip-card shadow">
+                    <div class="trip-card-panel shadow">
+                        <h4>Hotel Name</h4>
                         <div class="rating">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                         </div>
-                        <div class="price">&euro;1000</div>
+                        <h2 class="price">&euro;1000</h2>
                         <div class="stats">
                             <div class="stats-button">
                                 <img src="img/icons/like.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                             <div class="stats-button">
                                 <img src="img/icons/dislike.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="trip">
-                    <div class="info">
-                        <div class="title">Hotel Name</div>
+                <div class="trip-card shadow">
+                    <div class="trip-card-panel shadow">
+                        <h4>Hotel Name</h4>
                         <div class="rating">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                         </div>
-                        <div class="price">&euro;1000</div>
+                        <h2 class="price">&euro;1000</h2>
                         <div class="stats">
                             <div class="stats-button">
                                 <img src="img/icons/like.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                             <div class="stats-button">
                                 <img src="img/icons/dislike.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="trip">
-                    <div class="info">
-                        <div class="title">Hotel Name</div>
+                <div class="trip-card shadow">
+                    <div class="trip-card-panel shadow">
+                        <h4>Hotel Name</h4>
                         <div class="rating">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                             <img src="img/icons/star.png" alt="star">
                         </div>
-                        <div class="price">&euro;1000</div>
+                        <h2 class="price">&euro;1000</h2>
                         <div class="stats">
                             <div class="stats-button">
                                 <img src="img/icons/like.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                             <div class="stats-button">
                                 <img src="img/icons/dislike.svg" alt="like">
-                                <div class="text">50</div>
+                                <p>50</p>
                             </div>
                         </div>
                     </div>
@@ -276,39 +271,33 @@
     </div>
 
     <footer>
-        <div class="container-footer">
-            <div class="item">
-                <div class="title">Our team</div>
-                <ul>
-                    <li>
-                        <div class="name">Nume Prenume</div>
-                        <div class="email">nume.prenume@email.com</div>
-                    </li>
-                    <li>
-                        <div class="name">Nume Prenume</div>
-                        <div class="email">nume.prenume@email.com</div>
-                    </li>
-                    <li>
-                        <div class="name">Nume Prenume</div>
-                        <div class="email">nume.prenume@email.com</div>
-                    </li>
-                </ul>
-            </div>
-            <div class="item">
-                <div class="title">About us</div>
-                <div class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae unde iusto, illum quod praesentium aliquam ratione minima doloremque, at quasi provident eligendi minus obcaecati cum ipsa corporis nostrum tempora qui!</div>
-            </div>
-            <div class="item">
-                <div class="title">Contact</div>
-                <a href=""><img src="img/icons/github.png" alt="github"></a>
-            </div>
+        <div class="footer-item">
+            <h2>Our team</h2>
+            <ul>
+                <li>
+                    <h4>Nume Prenume</h4>
+                    <h4>nume.prenume@email.com</h4>
+                </li>
+                <li>
+                    <h4>Nume Prenume</h4>
+                    <h4>nume.prenume@email.com</h4>
+                </li>
+                <li>
+                    <h4>Nume Prenume</h4>
+                    <h4>nume.prenume@email.com</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-item">
+            <h2>Contact</h2>
+            <a class="shadow" href=""><img src="img/icons/github.png" alt="github"></a>
         </div>
     </footer>
 
     <script>
         var modal1 = document.getElementById('login');
         var modal2 = document.getElementById('signup');
-        var userdrop = document.getElementById('user-drop');
+        var userdrop = document.getElementById('user-menu');
 
         window.onclick = function(event) {
             if(event.target == modal1) {
