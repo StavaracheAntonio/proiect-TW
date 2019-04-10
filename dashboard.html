@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link href="styles/dashboard_style.css" rel="stylesheet" type="text/css">
+    <title>InspireMe! - Raducanu Andrei</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="menu">
+            <img class="shadow" src="img/icons/user.png" alt="user">
+            <button onclick="document.getElementById('user-menu').style.display='block'" class="button-normal">
+                Andrei Raducanu
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content shadow">
+            <h1>Dashboard</h1>
+        </div>
+
+        <div class="user-content">
+            <div class="user-info shadow">
+                <img src="img/icons/user.png" alt="user">
+                <h2>Andrei Raducanu</h2>
+                <h4>raducanu.andrei98@gmail.com</h4>
+            </div>
+            <form class="user-form shadow" name="signupForm">
+                <h2>Update account</h2>
+                <input class="form-field shadow" type="text" name="firstname" placeholder="First name">
+                <input class="form-field shadow" type="text" name="lastname" placeholder="Last name">
+                <input class="form-field shadow" type="password" name="password" placeholder="Password">
+                <input class="form-field shadow" type="password" name="password" placeholder="Confirm password">
+                <button class="shadow" type="submit">UPDATE</button>
+            </form>
+            <div class="saved-trips shadow">
+                <h2>Saved Trips</h2>
+                <div class="trip-container">
+                    <div class="trip-item">
+                        <h4 class="location">London</h4>
+                        <h4 class="date">01 Apr 2019</h4>
+                        <h4 class="price">1000$</h4>
+                        <img class="notification" src="img/icons/notification.svg" alt="notification">
+                        <span class="delete">&times;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <form class="flight-search shadow">
+            <div class="flight-search-item">
+                <label>From</label>
+                <input type="text" name="from" id="from" placeholder="Iasi">
+            </div>
+            <div class="flight-search-item">
+                <label>To</label>
+                <input type="text" name="from" id="from" placeholder="London">
+            </div>
+            <div class="flight-search-item">
+                <label>Depart</label>
+                <input type="text" name="from" id="from" placeholder="01 Apr 2019">
+            </div>
+            <div class="flight-search-item">
+                <label>Return</label>
+                <input type="text" name="from" id="from" placeholder="01 Aug 2019">
+            </div>
+            <input type="submit" value="SHOW FLIGHTS">
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-item">
+            <h2>Our team</h2>
+            <ul>
+                <li>
+                    <h4>Acsinte Matei</h4>
+                    <h4>nume.prenume@email.com</h4>
+                </li>
+                <li>
+                    <h4>Raducanu Andrei</h4>
+                    <h4>nume.prenume@email.com</h4>
+                </li>
+                <li>
+                    <h4>Stavarache Antonio</h4>
+                    <h4>nume.prenume@email.com</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-item">
+            <h2>Contact</h2>
+            <a class="shadow" href="https://github.com/StavaracheAntonio/proiect-TW"><img src="img/icons/github.png"
+                    alt="github"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
