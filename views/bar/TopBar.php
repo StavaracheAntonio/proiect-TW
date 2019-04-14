@@ -27,7 +27,7 @@
         <form class="account-form" name="loginForm">
             <span onclick="document.getElementById('login').style.display='none'" class="close-button">&times;</span>
             <h2>Welcome back!</h2>
-            <img class="shadow" src="img/icons/user.png" alt="user">
+            <img class="shadow" src="styles/img/icons/user.png" alt="user">
             <input class="form-field shadow" type="text" name="username" placeholder="Username">
             <input class="form-field shadow" type="password" name="password" placeholder="Password">
             <button class="shadow" type="submit">Log In</button>
@@ -41,7 +41,7 @@
         <form class="account-form" name="signupForm">
             <span onclick="document.getElementById('signup').style.display='none'" class="close-button">&times;</span>
             <h2>Nice to meet you!</h2>
-            <img class="shadow" src="img/icons/user.png" alt="user">
+            <img class="shadow" src="styles/img/icons/user.png" alt="user">
             <input class="form-field shadow" type="text" name="username" placeholder="Username">
             <input class="form-field shadow" type="password" name="password" placeholder="Password">
             <input class="form-field shadow" type="password" name="password" placeholder="Confirm password">

@@ -6,8 +6,8 @@
 <body>
     <div id="index">
         <div id="index-content">
-            <h1>Going places together</h1>
-            <h3>Welcome to the world</h3>
+            <h1><i>“Traveling – it leaves you speechless, <br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;then turns you into a storyteller.”</i></h1>
             <a class="shadow" href="Home.php">TRAVEL NOW</a>
         </div>
     </div>
