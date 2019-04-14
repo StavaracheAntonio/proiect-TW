@@ -143,6 +143,14 @@
     flex-direction: column;
 }
 
+.user-trip-container::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.user-trip-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
 .user-trip-item {
     display: flex;
     justify-content: left;

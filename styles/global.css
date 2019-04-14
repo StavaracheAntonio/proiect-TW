@@ -41,6 +41,22 @@ p {
     font-size: 1em;
 }
 
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0E6C8E;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0C5D7A;
+}
+
 .shadow {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.20);
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.20);
