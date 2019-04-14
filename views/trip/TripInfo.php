@@ -16,23 +16,23 @@
                 elegance.
             </p>
         </div>
-        <img src="styles/img/london_info.jpg" alt="London">
+        <img src="styles/img/london_info.jpg" class="shadow" alt="London">
     </div>
     <div class="tripinfo-details">
         <h2>Essential facts about London</h2>
         <div class="tripinfo-details-list">
-            <div class="tripinfo-details-item">
+            <div class="tripinfo-details-item shadow">
                 <h3>Currency</h3>
                 <img src="styles/img/icons/wallet.svg" alt="wallet">
                 <h4>Pound sterling &#163;</h4>
             </div>
-            <div class="tripinfo-details-item">
+            <div class="tripinfo-details-item shadow">
                 <h3>Electricity</h3>
                 <img src="styles/img/icons/power-cord.svg" alt="wallet">
                 <h4>230V 50Hz</h4>
             </div>
 
-            <div class="tripinfo-details-item">
+            <div class="tripinfo-details-item shadow">
                 <h3>Visa </h3>
                 <img src="styles/img/icons/passport.svg" alt="wallet">
                 <h4>Passaport required</h4>

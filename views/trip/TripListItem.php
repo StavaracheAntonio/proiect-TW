@@ -7,6 +7,6 @@
             <br><br>
             Book a flight to Hanoi with Qatar Airways to experience the exuberance of Vietnamese culture
             amid Eurasian architecture in a tropical climate.</p>
-        <a href="trip.php">Find more about London</a>
+        <a href="trip.php" class="shadow">Find more about London</a>
     </div>
 </div>

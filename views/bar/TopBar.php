@@ -1,4 +1,4 @@
-<div class="top-bar">
+<div class="top-bar shadow">
     <div id="menu1" class="menu">
         <button onclick="document.getElementById('signup').style.display='block'" class="button shadow">
             Sign Up

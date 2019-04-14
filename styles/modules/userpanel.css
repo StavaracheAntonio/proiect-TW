@@ -170,13 +170,12 @@
 .user-trip-item .notification {
     margin: 0 8px;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.2);
+    opacity: 0.2;
     cursor: pointer;
-    margin: 0 8px;
 }
 
 .user-trip-item .notification:hover {
-    color: #0E6C8E;
+    opacity: 1;
 }
 
 .user-trip-item .delete {

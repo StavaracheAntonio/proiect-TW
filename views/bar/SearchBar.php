@@ -2,31 +2,31 @@
     <h3>What are you interested in?</h3>
     <div class="search-categories">
         <div class="search-category">
-            <img src="styles/img/outside.jpg" alt="Outdoor">
+            <img src="styles/img/outside.jpg" class="shadow" alt="Outdoor">
             <h4>Outdoor &<br>Adventure</h4>
         </div>
         <div class="search-category">
-            <img src="styles/img/city.jpg" alt="city">
+            <img src="styles/img/city.jpg" class="shadow" alt="city">
             <h4>City</h4>
         </div>
         <div class="search-category">
-            <img src="styles/img/culture.jpg" alt="culture">
+            <img src="styles/img/culture.jpg" class="shadow" alt="culture">
             <h4>Culture &<br>History</h4>
         </div>
         <div class="search-category">
-            <img src="styles/img/honeymoon.jpg" alt="honeymoon">
+            <img src="styles/img/honeymoon.jpg" class="shadow" alt="honeymoon">
             <h4>Honeymoon</h4>
         </div>
         <div class="search-category">
-            <img src="styles/img/beaches.jpg" alt="beaches">
+            <img src="styles/img/beaches.jpg" class="shadow" alt="beaches">
             <h4>Beaches &<br>Islands</h4>
         </div>
         <div class="search-category">
-            <img src="styles/img/family.jpg" alt="family">
+            <img src="styles/img/family.jpg" class="shadow" alt="family">
             <h4>Family</h4>
         </div>
         <div class="search-category">
-            <img src="styles/img/shopping.jpg" alt="shopping">
+            <img src="styles/img/shopping.jpg" class="shadow" alt="shopping">
             <h4>Shopping</h4>
         </div>
     </div>
