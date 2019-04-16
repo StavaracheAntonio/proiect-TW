@@ -1,0 +1,964 @@
+<!DOCTYPE HTML><html><head><title>Locations API API documentation</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="generator" content="https://github.com/raml2html/raml2html 7.3.0"><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"><script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script><script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script><script type="text/javascript">
+      $(document).ready(function() {
+  $('.page-header pre code, .top-resource-description pre code, .modal-body pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+  $('[data-toggle]').click(function() {
+    var selector = $(this).data('target') + ' pre code';
+    $(selector).each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });
+
+  // open modal on hashes like #_action_get
+  $(window).bind('hashchange', function(e) {
+    var anchor_id = document.location.hash.substr(1); //strip #
+    var element = $('#' + anchor_id);
+
+    // do we have such element + is it a modal?  --> show it
+    if (element.length && element.hasClass('modal')) {
+      element.modal('show');
+    }
+  });
+
+  // execute hashchange on first page load
+  $(window).trigger('hashchange');
+
+  // remove url fragment on modal hide
+  $('.modal').on('hidden.bs.modal', function() {
+    try {
+      if (history && history.replaceState) {
+          history.replaceState({}, '', '#');
+      }
+    } catch(e) {}
+  });
+});
+    </script><style>
+      .hljs {
+  background: transparent;
+}
+.parent {
+  color: #999;
+}
+.list-group-item > .badge {
+  float: none;
+  margin-right: 6px;
+}
+.panel-title > .methods {
+  float: right;
+}
+.badge {
+  border-radius: 0;
+  text-transform: uppercase;
+  width: 70px;
+  font-weight: normal;
+  color: #f3f3f6;
+  line-height: normal;
+}
+.badge_get {
+  background-color: #63a8e2;
+}
+.badge_post {
+  background-color: #6cbd7d;
+}
+.badge_put {
+  background-color: #22bac4;
+}
+.badge_delete {
+  background-color: #d26460;
+}
+.badge_patch {
+  background-color: #ccc444;
+}
+.list-group,
+.panel-group {
+  margin-bottom: 0;
+}
+.panel-group .panel+.panel-white {
+  margin-top: 0;
+}
+.panel-group .panel-white {
+  border-bottom: 1px solid #F5F5F5;
+  border-radius: 0;
+}
+.panel-white:last-child {
+  border-bottom-color: white;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.panel-white .panel-heading {
+  background: white;
+}
+.tab-pane ul {
+  padding-left: 2em;
+}
+.tab-pane h1 {
+  font-size: 1.3em;
+}
+.tab-pane h2 {
+  font-size: 1.2em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ddd;
+}
+.tab-pane h3 {
+  font-size: 1.1em;
+}
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+#sidebar {
+  margin-top: 30px;
+  padding-right: 5px;
+  overflow: auto;
+  height: 90%;
+}
+.top-resource-description {
+  border-bottom: 1px solid #ddd;
+  background: #fcfcfc;
+  padding: 15px 15px 0 15px;
+  margin: -15px -15px 10px -15px;
+}
+.resource-description {
+  border-bottom: 1px solid #fcfcfc;
+  background: #fcfcfc;
+  padding: 15px 15px 0 15px;
+  margin: -15px -15px 10px -15px;
+}
+.resource-description p:last-child {
+  margin: 0;
+}
+.list-group .badge {
+  float: left;
+}
+.method_description {
+  margin-left: 85px;
+}
+.method_description p:last-child {
+  margin: 0;
+}
+.list-group-item {
+  cursor: pointer;
+}
+.list-group-item:hover {
+  background-color: #f5f5f5;
+}
+pre code {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+.items {
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+}
+.examples {
+  margin-left: 0.5em;
+}
+.resource-modal li > ul {
+  margin-bottom: 1em;
+}
+.required {
+  color: #f00;
+}
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>Locations API API documentation</h1><p>https://api.skypicker.com/locations</p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="search_by_hashtags" class="panel-title">/Search by hashtags</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_search_by_hashtags"><span class="parent"></span>/Search by hashtags</a> <span class="methods"><a href="#search_by_hashtags_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_search_by_hashtags" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#search_by_hashtags_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>This type of request returns a list of destinations most searched / clicked on / booked from the starting point term. The limit is used to limit the range of results.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="search_by_hashtags_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/Search by hashtags</h4></div><div class="modal-body"><div class="alert alert-info"><p>This type of request returns a list of destinations most searched / clicked on / booked from the starting point term. The limit is used to limit the range of results.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#search_by_hashtags_get_request" data-toggle="tab">Request</a></li><li><a href="#search_by_hashtags_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="search_by_hashtags_get_request"><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "type": "hashtag",
+  "hashtag": "beach",
+  "term": "london_gb",
+  "month": "1",
+  "locale": "en-US",
+  "limit": "100",
+  "sort": "name",
+  "active_only": "true" 
+}  
+</code></pre></div></div><div class="tab-pane" id="search_by_hashtags_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "locations": [
+    {
+      "id": "LCY",
+      "int_id": "9625",
+      "active": true,
+      "code": "LCY",
+      "name": "London City Airport",
+      "slug": "london-city-airport",
+      "alternative_names": [],
+      "rank": 0,
+      "timezone": "Europe/London",
+      "city": {
+        "id": "london_gb",
+        "name": "London",
+        "code": "LON",
+        "slug": "london",
+        "subdivision": "null",
+        "autonomous_territory": "null",
+        "country": {
+          "id": "GB",
+          "name": "United Kingdom",
+          "slug": "united-kingdom",
+          "code": "GB"
+        },
+        "region": {
+          "id": "northern",
+          "name": "Northern Europe",
+          "slug": "northern-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
+        }
+      },
+      "location": {
+        "lon": 0.054167,
+        "lat": 51.505
+      },
+      "alternative_departure_points": {
+        "id": "LHR",
+        "distance": 35.8,
+        "duration": 1.4
+      },
+      "type": "airport"
+    },
+    {
+      "id": "XAK",
+      "active": true,
+      "code": "XAK",
+      "name": "Herning Railway Station",
+      "slug": "erning-railway-station-herning-denmark",
+      "alternative_names": [],
+      "rank": "127",
+      "timezone": "Europe/Copenhagen",
+      "city": {
+        "id": "herning_dk",
+        "name": "Herning",
+        "code": "ZRY",
+        "slug": "herning-denmark",
+        "subdivision": "null",
+        "autonomous_territory": "null",
+        "country": {
+          "id": "DK",
+          "code": "DK",
+          "name": "Denmark",
+          "slug": "denmark"
+        },
+        "region": {
+          "id": "nothern",
+          "name": "Northern Europe",
+          "slug": "northern-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
+        }
+      },
+      "location": {
+        "lat": "56.132625",
+        "lon": "8.977992"
+      },
+      "alternative_departure_points": {
+        "id": "KRP",
+        "distance": 0.461157,
+        "duration": 0.82
+      },
+      "type": "station"
+    },
+    {
+      "id": "PFL",
+      "active": true,
+      "code": "PFL",
+      "name": "Florenc",
+      "slug": "florenc-prague-czech-republic",
+      "alternative_names": [],
+      "rank": "127",
+      "timezone": "Europe/Prague",
+      "city": {
+        "id": "prague_cz",
+        "name": "Prague",
+        "code": "PRG",
+        "slug": "prague-czechia",
+        "subdivision": "null",
+        "autonomous_territory": "null",
+        "country": {
+          "id": "CZ",
+          "code": "CZ",
+          "name": "Czechia",
+          "slug": "czechia"
+        },
+        "region": {
+          "id": "central",
+          "name": "Central Europe",
+          "slug": "central-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
+        }
+      },
+      "location": {
+        "lat": "50.132625",
+        "lon": "14.977992"
+      },
+      "alternative_departure_points": {
+        "id": "BRQ",
+        "distance": 200,
+        "duration": 2.5
+      },
+      "type": "bus_station"
+    },
+    {
+      "id": "london_gb",
+      "active": true,
+      "name": "London",
+      "slug": "london-united-kingdom",
+      "code": "LON",
+      "alternative_names": [],
+      "rank": "0",
+      "timezone": "Europe/London",
+      "population": "7556900",
+      "airports": "6",
+      "stations": "0",
+      "subdivision": "null",
+      "autonomous_territory": "null",
+      "country": {
+        "id": "GB",
+        "name": "United Kingdom",
+        "slug": "united-kingdom",
+        "code": "GB"
+      },
+      "region": {
+        "id": "northern",
+        "name": "Northern Europe",
+        "slug": "northern-europe"
+      },
+      "continent": {
+        "id": "europe",
+        "name": "Europe",
+        "slug": "europe",
+        "code": "EU"
+      },
+      "location": {
+        "lat": "51.507351",
+        "lon": "-0.127758"
+      },
+      "type": "city"
+    },
+    {
+      "name": "California",
+      "id": "CA_US",
+      "active": true,
+      "slug": "california-united-states",
+      "code": "CA",
+      "alternative_names": [
+        "Kalifornie"
+      ],
+      "rank": "0",
+      "country": {
+        "id": "US",
+        "code": "US",
+        "name": "United States",
+        "slug": "united-states"
+      },
+      "region": {
+        "id": "northern",
+        "name": "Northern America",
+        "slug": "northern-america"
+      },
+      "continent": {
+        "id": "north",
+        "code": "NA",
+        "name": "North America",
+        "slug": "north-america"
+      },
+      "location": {
+        "lat": "38.555605",
+        "lon": "-121.468926"
+      },
+      "type": "subdivision"
+    },
+    {
+      "id": "PR",
+      "active": true,
+      "name": "Puerto Rico",
+      "slug": "puerto-rico-united-states",
+      "code": "PR",
+      "alternative_names": [],
+      "rank": "0",
+      "country": {
+        "id": "US",
+        "code": "US",
+        "name": "United States",
+        "slug": "united-states"
+      },
+      "region": {
+        "id": "caribbean",
+        "name": "Caribbean",
+        "slug": "caribbean"
+      },
+      "continent": {
+        "id": "north",
+        "code": "NA",
+        "name": "North America",
+        "slug": "north-america"
+      },
+      "location": {
+        "lat": "18.45",
+        "lon": "-66.1"
+      },
+      "type": "autonomous_territory"
+    },
+    {
+      "id": "GB",
+      "active": true,
+      "code": "GB",
+      "name": "United Kingdom",
+      "slug": "united-kingdom",
+      "alternative_names": [
+        "Velká Británie\""
+      ],
+      "rank": "9",
+      "neighbours": [
+        "IE"
+      ],
+      "organizations": [
+        "EU"
+      ],
+      "region": {
+        "id": "northern",
+        "name": "Northern Europe",
+        "slug": "northern-europe"
+      },
+      "continent": {
+        "id": "europe",
+        "code": "EU",
+        "name": "Europe",
+        "slug": "europe"
+      },
+      "location": {
+        "lat": "51.5",
+        "lon": "-0.083333"
+      },
+      "type": "country"
+    }
+  ],
+  "meta": {
+    "locale": {
+      "code": "en-US",
+      "status": "OK"
+    }
+  }
+}
+</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "status": error,
+  "message": "Bad request format, missing request’s params, invalid params’ values."
+}
+</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "status": error,
+  "message": "Location specified does not exist."
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="search_by_radius" class="panel-title">/Search by radius</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_search_by_radius"><span class="parent"></span>/Search by radius</a> <span class="methods"><a href="#search_by_radius_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_search_by_radius" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#search_by_radius_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>This type of request supports either specification of location by coordinates (lat, lon) or by identifier (slug or id of location - term).</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="search_by_radius_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/Search by radius</h4></div><div class="modal-body"><div class="alert alert-info"><p>This type of request supports either specification of location by coordinates (lat, lon) or by identifier (slug or id of location - term).</p></div><ul class="nav nav-tabs"><li class="active"><a href="#search_by_radius_get_request" data-toggle="tab">Request</a></li><li><a href="#search_by_radius_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="search_by_radius_get_request"><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "type": "radius",
+  "term": "london_gb",
+  "lat": "40.730610",
+  "lon": "-73.935242",
+  "radius": "250",
+  "locale": "en-US",
+  "location_types": "airport",
+  "limit": "20",
+  "sort": "name",
+  "active_only": "true"
+}  
+</code></pre></div></div><div class="tab-pane" id="search_by_radius_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+"tips": [
+    {
+        "search_params_changed": {
+            "fly_from": "48.148596-17.107748-28km"
+        },
+        "type": "cheaper-origin",
+        "itinerary":
+        { "itinerary": {
+          "aTimeUTC": 1561114500,
+          "mapIdfrom": "bratislava_sk",
+          "has_airport_change": false,
+          "p3": 1,
+          "price": 53,
+          "hashtags": [
+            "morning",
+            "friday",
+            "direct",
+            "duration:3-4",
+            "departure:9-10"
+          ],
+          "distance": 1854.0,
+          "conversion": {
+            "EUR": 53
+          },
+          "bags_price":
+          {
+            "1": 25.0,
+            "2": 50.0
+          },
+          "cityTo": "Madrid",
+          "transfers": [
+
+          ],
+          "flyFrom": "BTS",
+          "id": "19338210509734587_0",
+          "duration": {
+            "total": 10800,
+            "return": 0,
+            "departure": 10800
+          },
+          "dTimeUTC": 1561103700,
+          "p2": 1,
+          "countryFrom": {
+            "code": "SK",
+            "name": "Slovensko"
+          },
+          "p1": 1,
+          "mapIdto": "madrid_es",
+          "quality": 88.99991,
+          "nightsInDest": null,
+          "dTime": 1561110900,
+          "found_on": [
+            "deprecated"
+          ],
+          "airlines": [
+            "FR"
+          ],
+          "booking_token": "oKWrjE3p79Fphzv+baF3C2h1PDgCet9WaEXSzPuPgCEAv+on9q2YST/DjPlyl3WZuKwoHy5r5npNKffSIiTmgLyppvOybJWJe9U+Fv6sssKhrhbIqGfIIxlVwIHRi2UtuJOFzo2xsQt8GAjDu8xe9x8/6KZdZm8j2+Vw7GRRweV+82XkWNOpPDTd7o51ay0cUwSDMP0PMWgxiZs3RhPSLQJbK69Or/0qi35oEilVP7OQX7CqunQRy3SCEPkVwLLPtRSABYtHcoWtvSfEJHg3Z+EhPtFhWZo6f3NvYq2KjzwvxLdQgD4tYZD7pfapPaEDVrsFurmW/v4vVhslarDnJe9Us08cxdpHk6dowZ7/w1TtOtW32qGncuGs2RL8ICEQRjgeWzqtAi8OqAMfJ++KMKGZ/4bux7/LWuoZC0VrDx9KqfKz5gaVfNywBiFjlG+y76u1gJDNk3bOj3FQ2aog47kzH3ch0hBX0XjwvxUtMQEXZg8zi5ljrOqzzGCIhrhc4NoywVRkLnCw4Rp59Tt35KW95pqz50ArzbF14jfLAHh6nFBAH2mL3cwzPs/XrcPNMSuG6U8vxwPhVB28HLewG8ht2r/wCqj9lwMbmLjXTZrimbYsCznPQlEH8E9dCz/RGzoul/ICTYIPwJbVpGQE8gXxBC9AXtrjNUy2k3YvjlmbT5OG5zHHXpdwNEq2Z1ZEjr3WQiZKwB8cxAcd/tHlG0dRLcqpsmQDZTDei3mwGJk=",
+          "flyTo": "MAD",
+          "pnr_count": 1,
+          "fly_duration": "3h 0m",
+          "facilitated_booking_available": false,
+          "routes": [
+            [
+              "BTS",
+              "MAD"
+            ]
+          ],
+          "cityFrom": "Bratislava",
+          "aTime": 1561121700,
+          "countryTo": {
+            "code": "ES",
+            "name": "Španielsko"
+          },
+          "route": [
+            {
+              "aTimeUTC": 1561114500,
+              "refresh_timestamp": 1546579168,
+              "bags_recheck_required": false,
+              "return": 0,
+              "latTo": 40.493611,
+              "flight_no": 2516,
+              "price": 1,
+              "original_return": 0,
+              "operating_carrier": null,
+              "cityTo": "Madrid",
+              "mapIdfrom": "bratislava_sk",
+              "lngFrom": 17.212778,
+              "vehicle_type": "aircraft",
+              "flyFrom": "BTS",
+              "id": "19338210509734587_0",
+              "dTimeUTC": 1561103700,
+              "equipment": null,
+              "mapIdto": "madrid_es",
+              "combination_id": "19338210509734587",
+              "dTime": 1561110900,
+              "fare_family": "",
+              "found_on": "deprecated",
+              "flyTo": "MAD",
+              "source": "deprecated",
+              "latFrom": 48.170278,
+              "airline": "FR",
+              "fare_classes": "A",
+              "lngTo": -3.566667,
+              "cityFrom": "Bratislava",
+              "last_seen": 1546579168,
+              "aTime": 1561121700,
+              "guarantee": false,
+              "fare_basis": "AZ10LOW"
+            }
+          ],
+          "baglimit":
+                {
+            "hold_weight": 20
+                }
+                }
+                }
+            ]
+        }
+    },
+    {
+        "search_params_changed": {
+            "fly_from": "48.148596-17.107748-59km"
+        },
+        "type": "faster-origin",
+        "itinerary": { THE SAME STRUCTURE AS ABOVE. }
+        },
+    {
+        "search_params_changed": {
+            "date_from": "19/06/2019",
+            "date_to": "23/06/2019"
+        },
+        "type": "cheaper-date",
+        "itinerary": { THE SAME STRUCTURE AS ABOVE. }
+    },
+    {
+        "search_params_changed": {
+            "date_from": "19/06/2019",
+            "date_to": "23/06/2019"
+        },
+        "type": "faster-date",
+        "itinerary": { THE SAME STRUCTURE AS ABOVE. }
+    }
+]
+}
+</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/422" target="_blank">422</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "message": [
+    {
+      "errors": [
+        "Not recognized location: `XXX`"
+      ],
+      "param": "fly_to"
+    }
+  ]
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="search_top_destinations" class="panel-title">/Search top destinations</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_search_top_destinations"><span class="parent"></span>/Search top destinations</a> <span class="methods"><a href="#search_top_destinations_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_search_top_destinations" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#search_top_destinations_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>This type of request returns a list of destinations most searched / clicked on / booked from the starting point term. The limit is used to limit the range of results.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="search_top_destinations_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/Search top destinations</h4></div><div class="modal-body"><div class="alert alert-info"><p>This type of request returns a list of destinations most searched / clicked on / booked from the starting point term. The limit is used to limit the range of results.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#search_top_destinations_get_request" data-toggle="tab">Request</a></li><li><a href="#search_top_destinations_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="search_top_destinations_get_request"><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "type": "top_destinations",
+  "term": "london_gb",
+  "locale": "en-US",
+  "limit": "100",
+  "sort": "name",
+  "active_only": "true",
+  "source_popularity": "searches",
+  "fallback_popularity": "bookings"
+}  
+</code></pre></div></div><div class="tab-pane" id="search_top_destinations_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "locations": [
+    {
+      "id": "LCY",
+      "int_id": "9625",
+      "active": true,
+      "code": "LCY",
+      "name": "London City Airport",
+      "slug": "london-city-airport",
+      "alternative_names": [],
+      "rank": 0,
+      "timezone": "Europe/London",
+      "city": {
+        "id": "london_gb",
+        "name": "London",
+        "code": "LON",
+        "slug": "london",
+        "subdivision": "null",
+        "autonomous_territory": "null",
+        "country": {
+          "id": "GB",
+          "name": "United Kingdom",
+          "slug": "united-kingdom",
+          "code": "GB"
+        },
+        "region": {
+          "id": "northern",
+          "name": "Northern Europe",
+          "slug": "northern-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
+        }
+      },
+      "location": {
+        "lon": 0.054167,
+        "lat": 51.505
+      },
+      "alternative_departure_points": {
+        "id": "LHR",
+        "distance": 35.8,
+        "duration": 1.4
+      },
+      "type": "airport"
+    },
+    {
+      "id": "XAK",
+      "active": true,
+      "code": "XAK",
+      "name": "Herning Railway Station",
+      "slug": "erning-railway-station-herning-denmark",
+      "alternative_names": [],
+      "rank": "127",
+      "timezone": "Europe/Copenhagen",
+      "city": {
+        "id": "herning_dk",
+        "name": "Herning",
+        "code": "ZRY",
+        "slug": "herning-denmark",
+        "subdivision": "null",
+        "autonomous_territory": "null",
+        "country": {
+          "id": "DK",
+          "code": "DK",
+          "name": "Denmark",
+          "slug": "denmark"
+        },
+        "region": {
+          "id": "nothern",
+          "name": "Northern Europe",
+          "slug": "northern-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
+        }
+      },
+      "location": {
+        "lat": "56.132625",
+        "lon": "8.977992"
+      },
+      "alternative_departure_points": {
+        "id": "KRP",
+        "distance": 0.461157,
+        "duration": 0.82
+      },
+      "type": "station"
+    },
+    {
+      "id": "PFL",
+      "active": true,
+      "code": "PFL",
+      "name": "Florenc",
+      "slug": "florenc-prague-czech-republic",
+      "alternative_names": [],
+      "rank": "127",
+      "timezone": "Europe/Prague",
+      "city": {
+        "id": "prague_cz",
+        "name": "Prague",
+        "code": "PRG",
+        "slug": "prague-czechia",
+        "subdivision": "null",
+        "autonomous_territory": "null",
+        "country": {
+          "id": "CZ",
+          "code": "CZ",
+          "name": "Czechia",
+          "slug": "czechia"
+        },
+        "region": {
+          "id": "central",
+          "name": "Central Europe",
+          "slug": "central-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
+        }
+      },
+      "location": {
+        "lat": "50.132625",
+        "lon": "14.977992"
+      },
+      "alternative_departure_points": {
+        "id": "BRQ",
+        "distance": 200,
+        "duration": 2.5
+      },
+      "type": "bus_station"
+    },
+    {
+      "id": "london_gb",
+      "active": true,
+      "name": "London",
+      "slug": "london-united-kingdom",
+      "code": "LON",
+      "alternative_names": [],
+      "rank": "0",
+      "timezone": "Europe/London",
+      "population": "7556900",
+      "airports": "6",
+      "stations": "0",
+      "subdivision": "null",
+      "autonomous_territory": "null",
+      "country": {
+        "id": "GB",
+        "name": "United Kingdom",
+        "slug": "united-kingdom",
+        "code": "GB"
+      },
+      "region": {
+        "id": "northern",
+        "name": "Northern Europe",
+        "slug": "northern-europe"
+      },
+      "continent": {
+        "id": "europe",
+        "name": "Europe",
+        "slug": "europe",
+        "code": "EU"
+      },
+      "location": {
+        "lat": "51.507351",
+        "lon": "-0.127758"
+      },
+      "type": "city"
+    },
+    {
+      "name": "California",
+      "id": "CA_US",
+      "active": true,
+      "slug": "california-united-states",
+      "code": "CA",
+      "alternative_names": [
+        "Kalifornie"
+      ],
+      "rank": "0",
+      "country": {
+        "id": "US",
+        "code": "US",
+        "name": "United States",
+        "slug": "united-states"
+      },
+      "region": {
+        "id": "northern",
+        "name": "Northern America",
+        "slug": "northern-america"
+      },
+      "continent": {
+        "id": "north",
+        "code": "NA",
+        "name": "North America",
+        "slug": "north-america"
+      },
+      "location": {
+        "lat": "38.555605",
+        "lon": "-121.468926"
+      },
+      "type": "subdivision"
+    },
+    {
+      "id": "PR",
+      "active": true,
+      "name": "Puerto Rico",
+      "slug": "puerto-rico-united-states",
+      "code": "PR",
+      "alternative_names": [],
+      "rank": "0",
+      "country": {
+        "id": "US",
+        "code": "US",
+        "name": "United States",
+        "slug": "united-states"
+      },
+      "region": {
+        "id": "caribbean",
+        "name": "Caribbean",
+        "slug": "caribbean"
+      },
+      "continent": {
+        "id": "north",
+        "code": "NA",
+        "name": "North America",
+        "slug": "north-america"
+      },
+      "location": {
+        "lat": "18.45",
+        "lon": "-66.1"
+      },
+      "type": "autonomous_territory"
+    },
+    {
+      "id": "GB",
+      "active": true,
+      "code": "GB",
+      "name": "United Kingdom",
+      "slug": "united-kingdom",
+      "alternative_names": [
+        "Velká Británie\""
+      ],
+      "rank": "9",
+      "neighbours": [
+        "IE"
+      ],
+      "organizations": [
+        "EU"
+      ],
+      "region": {
+        "id": "northern",
+        "name": "Northern Europe",
+        "slug": "northern-europe"
+      },
+      "continent": {
+        "id": "europe",
+        "code": "EU",
+        "name": "Europe",
+        "slug": "europe"
+      },
+      "location": {
+        "lat": "51.5",
+        "lon": "-0.083333"
+      },
+      "type": "country"
+    }
+  ],
+  "meta": {
+    "locale": {
+      "code": "en-US",
+      "status": "OK"
+    }
+  }
+}
+</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "status": error,
+  "message": "Bad request format, missing request’s params, invalid params’ values."
+}
+</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "status": error,
+  "message": "Location specified does not exist."
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="nomad_api" class="panel-title">/Nomad API</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_nomad_api"><span class="parent"></span>/Nomad API</a> <span class="methods"><a href="#nomad_api_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_nomad_api" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#nomad_api_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>Nomad API</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="nomad_api_post"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent"></span>/Nomad API</h4></div><div class="modal-body"><div class="alert alert-info"><p>Nomad API</p></div><ul class="nav nav-tabs"><li class="active"><a href="#nomad_api_post_request" data-toggle="tab">Request</a></li><li><a href="#nomad_api_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="nomad_api_post_request"><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+   "adults": "1",
+   "children": "0",
+   "infants": "0",
+   "v": "3",
+   "curr": "EUR",
+   "locale": "en",
+   "lang": "en",
+   "xml": "0",
+   "partner": "picky",
+   "partner_market": "us",
+   "sort": "price",
+   "asc": "1",
+   "limit": "1",
+   "date_from": "04/08/2018",
+   "date_to": "04/09/2018",
+   "return_from": "30/09/2018",
+   "return_to": "10/10/2018",
+   "selected_airlines": "null",
+   "selected_airlines_exclude": "False",
+   "fly_from": "CZ",
+   "fly_to": "porto",
+   "nights_on_trip_from": "3",
+   "nights_on_trip_to": "14",
+   "conn_on_diff_airport": "1",
+   "max_stopovers": "1"
+}
+</code></pre></div></div><div class="tab-pane" id="nomad_api_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>[object Object]</code></pre></div></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#search_by_hashtags">/Search by hashtags</a></li><li><a href="#search_by_radius">/Search by radius</a></li><li><a href="#search_top_destinations">/Search top destinations</a></li><li><a href="#nomad_api">/Nomad API</a></li></ul></div></div></div></div></body></html>

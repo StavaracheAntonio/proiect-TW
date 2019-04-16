@@ -1,0 +1,1550 @@
+#%RAML 1.0
+---
+title: Locations API
+baseUri: https://api.skypicker.com/locations
+/Search by hashtags:
+  get:
+    description: This type of request returns a list of destinations most searched / clicked on / booked from the starting point term. The limit is used to limit the range of results.
+    body:
+      application/json:
+         example: |
+          {
+            "type": "hashtag",
+            "hashtag": "beach",
+            "term": "london_gb",
+            "month": "1",
+            "locale": "en-US",
+            "limit": "100",
+            "sort": "name",
+            "active_only": "true" 
+          }  
+    responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "locations": [
+                    {
+                      "id": "LCY",
+                      "int_id": "9625",
+                      "active": true,
+                      "code": "LCY",
+                      "name": "London City Airport",
+                      "slug": "london-city-airport",
+                      "alternative_names": [],
+                      "rank": 0,
+                      "timezone": "Europe/London",
+                      "city": {
+                        "id": "london_gb",
+                        "name": "London",
+                        "code": "LON",
+                        "slug": "london",
+                        "subdivision": "null",
+                        "autonomous_territory": "null",
+                        "country": {
+                          "id": "GB",
+                          "name": "United Kingdom",
+                          "slug": "united-kingdom",
+                          "code": "GB"
+                        },
+                        "region": {
+                          "id": "northern",
+                          "name": "Northern Europe",
+                          "slug": "northern-europe"
+                        },
+                        "continent": {
+                          "id": "europe",
+                          "name": "Europe",
+                          "slug": "europe",
+                          "code": "EU"
+                        }
+                      },
+                      "location": {
+                        "lon": 0.054167,
+                        "lat": 51.505
+                      },
+                      "alternative_departure_points": {
+                        "id": "LHR",
+                        "distance": 35.8,
+                        "duration": 1.4
+                      },
+                      "type": "airport"
+                    },
+                    {
+                      "id": "XAK",
+                      "active": true,
+                      "code": "XAK",
+                      "name": "Herning Railway Station",
+                      "slug": "erning-railway-station-herning-denmark",
+                      "alternative_names": [],
+                      "rank": "127",
+                      "timezone": "Europe/Copenhagen",
+                      "city": {
+                        "id": "herning_dk",
+                        "name": "Herning",
+                        "code": "ZRY",
+                        "slug": "herning-denmark",
+                        "subdivision": "null",
+                        "autonomous_territory": "null",
+                        "country": {
+                          "id": "DK",
+                          "code": "DK",
+                          "name": "Denmark",
+                          "slug": "denmark"
+                        },
+                        "region": {
+                          "id": "nothern",
+                          "name": "Northern Europe",
+                          "slug": "northern-europe"
+                        },
+                        "continent": {
+                          "id": "europe",
+                          "name": "Europe",
+                          "slug": "europe",
+                          "code": "EU"
+                        }
+                      },
+                      "location": {
+                        "lat": "56.132625",
+                        "lon": "8.977992"
+                      },
+                      "alternative_departure_points": {
+                        "id": "KRP",
+                        "distance": 0.461157,
+                        "duration": 0.82
+                      },
+                      "type": "station"
+                    },
+                    {
+                      "id": "PFL",
+                      "active": true,
+                      "code": "PFL",
+                      "name": "Florenc",
+                      "slug": "florenc-prague-czech-republic",
+                      "alternative_names": [],
+                      "rank": "127",
+                      "timezone": "Europe/Prague",
+                      "city": {
+                        "id": "prague_cz",
+                        "name": "Prague",
+                        "code": "PRG",
+                        "slug": "prague-czechia",
+                        "subdivision": "null",
+                        "autonomous_territory": "null",
+                        "country": {
+                          "id": "CZ",
+                          "code": "CZ",
+                          "name": "Czechia",
+                          "slug": "czechia"
+                        },
+                        "region": {
+                          "id": "central",
+                          "name": "Central Europe",
+                          "slug": "central-europe"
+                        },
+                        "continent": {
+                          "id": "europe",
+                          "name": "Europe",
+                          "slug": "europe",
+                          "code": "EU"
+                        }
+                      },
+                      "location": {
+                        "lat": "50.132625",
+                        "lon": "14.977992"
+                      },
+                      "alternative_departure_points": {
+                        "id": "BRQ",
+                        "distance": 200,
+                        "duration": 2.5
+                      },
+                      "type": "bus_station"
+                    },
+                    {
+                      "id": "london_gb",
+                      "active": true,
+                      "name": "London",
+                      "slug": "london-united-kingdom",
+                      "code": "LON",
+                      "alternative_names": [],
+                      "rank": "0",
+                      "timezone": "Europe/London",
+                      "population": "7556900",
+                      "airports": "6",
+                      "stations": "0",
+                      "subdivision": "null",
+                      "autonomous_territory": "null",
+                      "country": {
+                        "id": "GB",
+                        "name": "United Kingdom",
+                        "slug": "united-kingdom",
+                        "code": "GB"
+                      },
+                      "region": {
+                        "id": "northern",
+                        "name": "Northern Europe",
+                        "slug": "northern-europe"
+                      },
+                      "continent": {
+                        "id": "europe",
+                        "name": "Europe",
+                        "slug": "europe",
+                        "code": "EU"
+                      },
+                      "location": {
+                        "lat": "51.507351",
+                        "lon": "-0.127758"
+                      },
+                      "type": "city"
+                    },
+                    {
+                      "name": "California",
+                      "id": "CA_US",
+                      "active": true,
+                      "slug": "california-united-states",
+                      "code": "CA",
+                      "alternative_names": [
+                        "Kalifornie"
+                      ],
+                      "rank": "0",
+                      "country": {
+                        "id": "US",
+                        "code": "US",
+                        "name": "United States",
+                        "slug": "united-states"
+                      },
+                      "region": {
+                        "id": "northern",
+                        "name": "Northern America",
+                        "slug": "northern-america"
+                      },
+                      "continent": {
+                        "id": "north",
+                        "code": "NA",
+                        "name": "North America",
+                        "slug": "north-america"
+                      },
+                      "location": {
+                        "lat": "38.555605",
+                        "lon": "-121.468926"
+                      },
+                      "type": "subdivision"
+                    },
+                    {
+                      "id": "PR",
+                      "active": true,
+                      "name": "Puerto Rico",
+                      "slug": "puerto-rico-united-states",
+                      "code": "PR",
+                      "alternative_names": [],
+                      "rank": "0",
+                      "country": {
+                        "id": "US",
+                        "code": "US",
+                        "name": "United States",
+                        "slug": "united-states"
+                      },
+                      "region": {
+                        "id": "caribbean",
+                        "name": "Caribbean",
+                        "slug": "caribbean"
+                      },
+                      "continent": {
+                        "id": "north",
+                        "code": "NA",
+                        "name": "North America",
+                        "slug": "north-america"
+                      },
+                      "location": {
+                        "lat": "18.45",
+                        "lon": "-66.1"
+                      },
+                      "type": "autonomous_territory"
+                    },
+                    {
+                      "id": "GB",
+                      "active": true,
+                      "code": "GB",
+                      "name": "United Kingdom",
+                      "slug": "united-kingdom",
+                      "alternative_names": [
+                        "Velká Británie\""
+                      ],
+                      "rank": "9",
+                      "neighbours": [
+                        "IE"
+                      ],
+                      "organizations": [
+                        "EU"
+                      ],
+                      "region": {
+                        "id": "northern",
+                        "name": "Northern Europe",
+                        "slug": "northern-europe"
+                      },
+                      "continent": {
+                        "id": "europe",
+                        "code": "EU",
+                        "name": "Europe",
+                        "slug": "europe"
+                      },
+                      "location": {
+                        "lat": "51.5",
+                        "lon": "-0.083333"
+                      },
+                      "type": "country"
+                    }
+                  ],
+                  "meta": {
+                    "locale": {
+                      "code": "en-US",
+                      "status": "OK"
+                    }
+                  }
+                }
+        400:
+          body:
+            application/json:
+              example: |
+                {
+                  "status": error,
+                  "message": "Bad request format, missing request’s params, invalid params’ values."
+                }
+
+        404:
+          body:
+            application/json:
+              example: |
+                {
+                  "status": error,
+                  "message": "Location specified does not exist."
+                }
+
+/Search by radius:
+  get:
+    description: This type of request supports either specification of location by coordinates (lat, lon) or by identifier (slug or id of location - term).
+    body:
+      application/json:
+         example: |
+           {
+             "type": "radius",
+             "term": "london_gb",
+             "lat": "40.730610",
+             "lon": "-73.935242",
+             "radius": "250",
+             "locale": "en-US",
+             "location_types": "airport",
+             "limit": "20",
+             "sort": "name",
+             "active_only": "true"
+           }  
+    responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                "tips": [
+                    {
+                        "search_params_changed": {
+                            "fly_from": "48.148596-17.107748-28km"
+                        },
+                        "type": "cheaper-origin",
+                        "itinerary":
+                        { "itinerary": {
+                          "aTimeUTC": 1561114500,
+                          "mapIdfrom": "bratislava_sk",
+                          "has_airport_change": false,
+                          "p3": 1,
+                          "price": 53,
+                          "hashtags": [
+                            "morning",
+                            "friday",
+                            "direct",
+                            "duration:3-4",
+                            "departure:9-10"
+                          ],
+                          "distance": 1854.0,
+                          "conversion": {
+                            "EUR": 53
+                          },
+                          "bags_price":
+                          {
+                            "1": 25.0,
+                            "2": 50.0
+                          },
+                          "cityTo": "Madrid",
+                          "transfers": [
+
+                          ],
+                          "flyFrom": "BTS",
+                          "id": "19338210509734587_0",
+                          "duration": {
+                            "total": 10800,
+                            "return": 0,
+                            "departure": 10800
+                          },
+                          "dTimeUTC": 1561103700,
+                          "p2": 1,
+                          "countryFrom": {
+                            "code": "SK",
+                            "name": "Slovensko"
+                          },
+                          "p1": 1,
+                          "mapIdto": "madrid_es",
+                          "quality": 88.99991,
+                          "nightsInDest": null,
+                          "dTime": 1561110900,
+                          "found_on": [
+                            "deprecated"
+                          ],
+                          "airlines": [
+                            "FR"
+                          ],
+                          "booking_token": "oKWrjE3p79Fphzv+baF3C2h1PDgCet9WaEXSzPuPgCEAv+on9q2YST/DjPlyl3WZuKwoHy5r5npNKffSIiTmgLyppvOybJWJe9U+Fv6sssKhrhbIqGfIIxlVwIHRi2UtuJOFzo2xsQt8GAjDu8xe9x8/6KZdZm8j2+Vw7GRRweV+82XkWNOpPDTd7o51ay0cUwSDMP0PMWgxiZs3RhPSLQJbK69Or/0qi35oEilVP7OQX7CqunQRy3SCEPkVwLLPtRSABYtHcoWtvSfEJHg3Z+EhPtFhWZo6f3NvYq2KjzwvxLdQgD4tYZD7pfapPaEDVrsFurmW/v4vVhslarDnJe9Us08cxdpHk6dowZ7/w1TtOtW32qGncuGs2RL8ICEQRjgeWzqtAi8OqAMfJ++KMKGZ/4bux7/LWuoZC0VrDx9KqfKz5gaVfNywBiFjlG+y76u1gJDNk3bOj3FQ2aog47kzH3ch0hBX0XjwvxUtMQEXZg8zi5ljrOqzzGCIhrhc4NoywVRkLnCw4Rp59Tt35KW95pqz50ArzbF14jfLAHh6nFBAH2mL3cwzPs/XrcPNMSuG6U8vxwPhVB28HLewG8ht2r/wCqj9lwMbmLjXTZrimbYsCznPQlEH8E9dCz/RGzoul/ICTYIPwJbVpGQE8gXxBC9AXtrjNUy2k3YvjlmbT5OG5zHHXpdwNEq2Z1ZEjr3WQiZKwB8cxAcd/tHlG0dRLcqpsmQDZTDei3mwGJk=",
+                          "flyTo": "MAD",
+                          "pnr_count": 1,
+                          "fly_duration": "3h 0m",
+                          "facilitated_booking_available": false,
+                          "routes": [
+                            [
+                              "BTS",
+                              "MAD"
+                            ]
+                          ],
+                          "cityFrom": "Bratislava",
+                          "aTime": 1561121700,
+                          "countryTo": {
+                            "code": "ES",
+                            "name": "Španielsko"
+                          },
+                          "route": [
+                            {
+                              "aTimeUTC": 1561114500,
+                              "refresh_timestamp": 1546579168,
+                              "bags_recheck_required": false,
+                              "return": 0,
+                              "latTo": 40.493611,
+                              "flight_no": 2516,
+                              "price": 1,
+                              "original_return": 0,
+                              "operating_carrier": null,
+                              "cityTo": "Madrid",
+                              "mapIdfrom": "bratislava_sk",
+                              "lngFrom": 17.212778,
+                              "vehicle_type": "aircraft",
+                              "flyFrom": "BTS",
+                              "id": "19338210509734587_0",
+                              "dTimeUTC": 1561103700,
+                              "equipment": null,
+                              "mapIdto": "madrid_es",
+                              "combination_id": "19338210509734587",
+                              "dTime": 1561110900,
+                              "fare_family": "",
+                              "found_on": "deprecated",
+                              "flyTo": "MAD",
+                              "source": "deprecated",
+                              "latFrom": 48.170278,
+                              "airline": "FR",
+                              "fare_classes": "A",
+                              "lngTo": -3.566667,
+                              "cityFrom": "Bratislava",
+                              "last_seen": 1546579168,
+                              "aTime": 1561121700,
+                              "guarantee": false,
+                              "fare_basis": "AZ10LOW"
+                            }
+                          ],
+                          "baglimit":
+                                {
+                            "hold_weight": 20
+                                }
+                                }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "search_params_changed": {
+                            "fly_from": "48.148596-17.107748-59km"
+                        },
+                        "type": "faster-origin",
+                        "itinerary": { THE SAME STRUCTURE AS ABOVE. }
+                        },
+                    {
+                        "search_params_changed": {
+                            "date_from": "19/06/2019",
+                            "date_to": "23/06/2019"
+                        },
+                        "type": "cheaper-date",
+                        "itinerary": { THE SAME STRUCTURE AS ABOVE. }
+                    },
+                    {
+                        "search_params_changed": {
+                            "date_from": "19/06/2019",
+                            "date_to": "23/06/2019"
+                        },
+                        "type": "faster-date",
+                        "itinerary": { THE SAME STRUCTURE AS ABOVE. }
+                    }
+                ]
+                }
+        422:
+          body:
+            application/json:
+              example: |
+                {
+                  "message": [
+                    {
+                      "errors": [
+                        "Not recognized location: `XXX`"
+                      ],
+                      "param": "fly_to"
+                    }
+                  ]
+                }
+
+/Search top destinations:
+  get:
+    description: This type of request returns a list of destinations most searched / clicked on / booked from the starting point term. The limit is used to limit the range of results.
+    body:
+      application/json:
+         example: |
+           {
+             "type": "top_destinations",
+             "term": "london_gb",
+             "locale": "en-US",
+             "limit": "100",
+             "sort": "name",
+             "active_only": "true",
+             "source_popularity": "searches",
+             "fallback_popularity": "bookings"
+           }  
+    responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "locations": [
+                    {
+                      "id": "LCY",
+                      "int_id": "9625",
+                      "active": true,
+                      "code": "LCY",
+                      "name": "London City Airport",
+                      "slug": "london-city-airport",
+                      "alternative_names": [],
+                      "rank": 0,
+                      "timezone": "Europe/London",
+                      "city": {
+                        "id": "london_gb",
+                        "name": "London",
+                        "code": "LON",
+                        "slug": "london",
+                        "subdivision": "null",
+                        "autonomous_territory": "null",
+                        "country": {
+                          "id": "GB",
+                          "name": "United Kingdom",
+                          "slug": "united-kingdom",
+                          "code": "GB"
+                        },
+                        "region": {
+                          "id": "northern",
+                          "name": "Northern Europe",
+                          "slug": "northern-europe"
+                        },
+                        "continent": {
+                          "id": "europe",
+                          "name": "Europe",
+                          "slug": "europe",
+                          "code": "EU"
+                        }
+                      },
+                      "location": {
+                        "lon": 0.054167,
+                        "lat": 51.505
+                      },
+                      "alternative_departure_points": {
+                        "id": "LHR",
+                        "distance": 35.8,
+                        "duration": 1.4
+                      },
+                      "type": "airport"
+                    },
+                    {
+                      "id": "XAK",
+                      "active": true,
+                      "code": "XAK",
+                      "name": "Herning Railway Station",
+                      "slug": "erning-railway-station-herning-denmark",
+                      "alternative_names": [],
+                      "rank": "127",
+                      "timezone": "Europe/Copenhagen",
+                      "city": {
+                        "id": "herning_dk",
+                        "name": "Herning",
+                        "code": "ZRY",
+                        "slug": "herning-denmark",
+                        "subdivision": "null",
+                        "autonomous_territory": "null",
+                        "country": {
+                          "id": "DK",
+                          "code": "DK",
+                          "name": "Denmark",
+                          "slug": "denmark"
+                        },
+                        "region": {
+                          "id": "nothern",
+                          "name": "Northern Europe",
+                          "slug": "northern-europe"
+                        },
+                        "continent": {
+                          "id": "europe",
+                          "name": "Europe",
+                          "slug": "europe",
+                          "code": "EU"
+                        }
+                      },
+                      "location": {
+                        "lat": "56.132625",
+                        "lon": "8.977992"
+                      },
+                      "alternative_departure_points": {
+                        "id": "KRP",
+                        "distance": 0.461157,
+                        "duration": 0.82
+                      },
+                      "type": "station"
+                    },
+                    {
+                      "id": "PFL",
+                      "active": true,
+                      "code": "PFL",
+                      "name": "Florenc",
+                      "slug": "florenc-prague-czech-republic",
+                      "alternative_names": [],
+                      "rank": "127",
+                      "timezone": "Europe/Prague",
+                      "city": {
+                        "id": "prague_cz",
+                        "name": "Prague",
+                        "code": "PRG",
+                        "slug": "prague-czechia",
+                        "subdivision": "null",
+                        "autonomous_territory": "null",
+                        "country": {
+                          "id": "CZ",
+                          "code": "CZ",
+                          "name": "Czechia",
+                          "slug": "czechia"
+                        },
+                        "region": {
+                          "id": "central",
+                          "name": "Central Europe",
+                          "slug": "central-europe"
+                        },
+                        "continent": {
+                          "id": "europe",
+                          "name": "Europe",
+                          "slug": "europe",
+                          "code": "EU"
+                        }
+                      },
+                      "location": {
+                        "lat": "50.132625",
+                        "lon": "14.977992"
+                      },
+                      "alternative_departure_points": {
+                        "id": "BRQ",
+                        "distance": 200,
+                        "duration": 2.5
+                      },
+                      "type": "bus_station"
+                    },
+                    {
+                      "id": "london_gb",
+                      "active": true,
+                      "name": "London",
+                      "slug": "london-united-kingdom",
+                      "code": "LON",
+                      "alternative_names": [],
+                      "rank": "0",
+                      "timezone": "Europe/London",
+                      "population": "7556900",
+                      "airports": "6",
+                      "stations": "0",
+                      "subdivision": "null",
+                      "autonomous_territory": "null",
+                      "country": {
+                        "id": "GB",
+                        "name": "United Kingdom",
+                        "slug": "united-kingdom",
+                        "code": "GB"
+                      },
+                      "region": {
+                        "id": "northern",
+                        "name": "Northern Europe",
+                        "slug": "northern-europe"
+                      },
+                      "continent": {
+                        "id": "europe",
+                        "name": "Europe",
+                        "slug": "europe",
+                        "code": "EU"
+                      },
+                      "location": {
+                        "lat": "51.507351",
+                        "lon": "-0.127758"
+                      },
+                      "type": "city"
+                    },
+                    {
+                      "name": "California",
+                      "id": "CA_US",
+                      "active": true,
+                      "slug": "california-united-states",
+                      "code": "CA",
+                      "alternative_names": [
+                        "Kalifornie"
+                      ],
+                      "rank": "0",
+                      "country": {
+                        "id": "US",
+                        "code": "US",
+                        "name": "United States",
+                        "slug": "united-states"
+                      },
+                      "region": {
+                        "id": "northern",
+                        "name": "Northern America",
+                        "slug": "northern-america"
+                      },
+                      "continent": {
+                        "id": "north",
+                        "code": "NA",
+                        "name": "North America",
+                        "slug": "north-america"
+                      },
+                      "location": {
+                        "lat": "38.555605",
+                        "lon": "-121.468926"
+                      },
+                      "type": "subdivision"
+                    },
+                    {
+                      "id": "PR",
+                      "active": true,
+                      "name": "Puerto Rico",
+                      "slug": "puerto-rico-united-states",
+                      "code": "PR",
+                      "alternative_names": [],
+                      "rank": "0",
+                      "country": {
+                        "id": "US",
+                        "code": "US",
+                        "name": "United States",
+                        "slug": "united-states"
+                      },
+                      "region": {
+                        "id": "caribbean",
+                        "name": "Caribbean",
+                        "slug": "caribbean"
+                      },
+                      "continent": {
+                        "id": "north",
+                        "code": "NA",
+                        "name": "North America",
+                        "slug": "north-america"
+                      },
+                      "location": {
+                        "lat": "18.45",
+                        "lon": "-66.1"
+                      },
+                      "type": "autonomous_territory"
+                    },
+                    {
+                      "id": "GB",
+                      "active": true,
+                      "code": "GB",
+                      "name": "United Kingdom",
+                      "slug": "united-kingdom",
+                      "alternative_names": [
+                        "Velká Británie\""
+                      ],
+                      "rank": "9",
+                      "neighbours": [
+                        "IE"
+                      ],
+                      "organizations": [
+                        "EU"
+                      ],
+                      "region": {
+                        "id": "northern",
+                        "name": "Northern Europe",
+                        "slug": "northern-europe"
+                      },
+                      "continent": {
+                        "id": "europe",
+                        "code": "EU",
+                        "name": "Europe",
+                        "slug": "europe"
+                      },
+                      "location": {
+                        "lat": "51.5",
+                        "lon": "-0.083333"
+                      },
+                      "type": "country"
+                    }
+                  ],
+                  "meta": {
+                    "locale": {
+                      "code": "en-US",
+                      "status": "OK"
+                    }
+                  }
+                }
+        400:
+          body:
+            application/json:
+              example: |
+                {
+                  "status": error,
+                  "message": "Bad request format, missing request’s params, invalid params’ values."
+                }
+        404:
+          body:
+            application/json:
+              example: |
+                {
+                  "status": error,
+                  "message": "Location specified does not exist."
+                }
+/Nomad API:
+  post:
+    description: Nomad API
+    body:
+      application/json:
+        example: |
+          {
+             "adults": "1",
+             "children": "0",
+             "infants": "0",
+             "v": "3",
+             "curr": "EUR",
+             "locale": "en",
+             "lang": "en",
+             "xml": "0",
+             "partner": "picky",
+             "partner_market": "us",
+             "sort": "price",
+             "asc": "1",
+             "limit": "1",
+             "date_from": "04/08/2018",
+             "date_to": "04/09/2018",
+             "return_from": "30/09/2018",
+             "return_to": "10/10/2018",
+             "selected_airlines": "null",
+             "selected_airlines_exclude": "False",
+             "fly_from": "CZ",
+             "fly_to": "porto",
+             "nights_on_trip_from": "3",
+             "nights_on_trip_to": "14",
+             "conn_on_diff_airport": "1",
+             "max_stopovers": "1"
+          }
+    responses:
+        200:
+          body:
+            application/json:
+              example: |
+        {
+          "search_params": {
+            "seats": {
+              "infants": 0,
+              "passengers": 1,
+              "adults": 1,
+              "children": 0
+            }
+          },
+          "time": 1,
+          "connections": [],
+          "currency": "EUR",
+          "_next": "https://api.skypicker.com/flights?sort=duration&adults=1&locale=en&date_to=04%2F09%2F2018&asc=1&offset=1&partner=picky&fly_from=brno_cz&return_to=10%2F10%2F2018&flight_type=salesman&date_from=04%2F08%2F2018&fly_to=brno_cz&children=0&limit=1&return_from=30%2F09%2F2018&v=3&infants=0",
+          "currency_rate": 1,
+          "data": [
+            {
+              "deep_link": "https://www.kiwi.com/deep?from=BRQ&to=FRA&departure=04-09-2018&flightsId=3974735809836368_0%7C3974735809836368_1%7C3974735809836368_2%7C3974735809836368_3%7C3629488600055529_0%7C3810907627796485_0%7C3630587644248872_0%7C4023113167273385_0%7C3985731044980437_0%7C3985731044980437_1%7C3985731044980437_2%7C3985731044980437_3%7C3985731044980437_4%7C3940651029470107_0%7C3940651029470107_1%7C3641583224947986_0%7C3940651029470107_2%7C3940651029470107_3&price=3273.0&passengers=1&affilid=picky&lang=en&currency=EUR&booking_token=sFs2Wc2jDhgBWRq71XyP+ddXOb3oY4DD41dcsk9lWrXuvzzNl7QZ+J9nfOVv6T4hk/SeXUKafCgW6wjq3w50jugqXEOgvNFykmqBNjw7NCUIJtrUG/pamwLpYH1lCzDfQHhuHn8qyson0aDn0A3u4z85w8abpuAlBWH4D5HezvlgwGfdnYBm3fcSRGLEKzR/ac2JVAysWlX/s2TrGTIlB5hGhHAKb4pM9IKu6n0CztpvXLQRGHfHqV98Mn1YcXRbIEm9iFxquYamle2aSrNJfryCtrnZkMKUfw6jmpYLWmF0LqFLOLQTJdpGlXd5N4lrmQcqJjT8dQc7gRb6W4KePnSpys+t4rvAvDlt1hN/PG6H/avSWiotpjyFFGWQhDmnpjJZMwwTBQK+1uc5N5wbmSZ3+N6GEdzYxwmKH8JKtGvXj9uMFHL0wJix8s1SnddNZ/Wi6D/PiPwGktwS4hu5Xdqbhmjhm7n0n6NmC2ZzOckIEuBcHfXC0+UyOnmNZblq5+PM0GPSe8s87x1jd0CV/pCM2uqb0QFVe0xehI1sMcm5+3Wjh1NGER5UuzBpcwStcItbtVkB1msae61l0xRbWD9BcNKwxsagUwmjh4YRU+aR2nZbB2Qa7E5b2Ri7LXBlvYv6oLYjHbbv6GxI7Qr5GGd5q2ZrbrzpzdNR/l7eGP2HEsRwEb/I+De+tdyRWCg+gwp8M0OEqma3AX5wuL9As+9xF6LUJbTzJF+a7iBjdveJhgpRyPN07GTvummJyb9QcKlM7/kTh2dbUGekgwqoVq8WyzXYqohSi/+djFtQ9KVujP4cggxYBhs7tdRrklHu+QL2GJIQOMcYFmEShT+pma/NqVpmvJUnQl05fEQcmN0iDEyNgv11YsGX5ScxlDbx78tgHPrAQFfcVHg9VMI6auz6ywzy1a4sMH2m3Q6+MqwCYTlvEs+njzzJ/bbwGl+aIfVCM3XvGVVXOwIKUFyeaNZ945Ud2B4dHdaUz/2g19xCTJaMf8ZuDqSqHGAD/TYq2jYRSWveo3uFTzStFYTAcVy4J37zC2JHgo+uziREu73jNTPJhRsz7zlAuXQgx3RyEoz0qkzqbAIBPuRRKWGjAd0PrBKitzeYmfUkAmyzrGgGPTtzCc7vQ0/aIwS++nBFpRKNw3OgyqRZvUKS/ZShCT4faSjO/Oe0ti8HgEtSg7DHdnDuT0mDlLX+5T/DMOZ8i762uuxD8T+jsv+/UFwgfK7t3srjgLOKRBnjset4mPUs4msG/zR3/xpnM+O+QYrMTFp45wZgQxZXYSbfJaCzLE8BLqPohKp5LLNiu+z6+vd5HHefEbfNC1+cjlJ0glqPqa432Tczk3VBPC2ntd6uDd+WFvTHVUZjUfG2Z6cOtpyeCPQDsb7kMSOKkfM2FoqMixJkEqr/abvYucTf4WvXG+nrmhX2GJlJ57IEkTlzdGTAQmEMRXw1yyVUP/RkWH4b16mehkXGcSeS6WprS5zmryK17qxBCkwEzmEN7+aTjB7Nc6Rjq7GuEOu/oQGu89X0uMwnKT4EkHDGHThar6LfJdWyLjtbYSoUY56sAKC65/7vCL1Q+39kzgUUzOel4H3vVmGf047fdSGk3OZfoy6zPYaS/ynKjpwsQdCh26bPIcA=&type2=salesman",
+              "price": 3273,
+              "booking_token": "sFs2Wc2jDhgBWRq71XyP+ddXOb3oY4DD41dcsk9lWrXuvzzNl7QZ+J9nfOVv6T4hk/SeXUKafCgW6wjq3w50jugqXEOgvNFykmqBNjw7NCUIJtrUG/pamwLpYH1lCzDfQHhuHn8qyson0aDn0A3u4z85w8abpuAlBWH4D5HezvlgwGfdnYBm3fcSRGLEKzR/ac2JVAysWlX/s2TrGTIlB5hGhHAKb4pM9IKu6n0CztpvXLQRGHfHqV98Mn1YcXRbIEm9iFxquYamle2aSrNJfryCtrnZkMKUfw6jmpYLWmF0LqFLOLQTJdpGlXd5N4lrmQcqJjT8dQc7gRb6W4KePnSpys+t4rvAvDlt1hN/PG6H/avSWiotpjyFFGWQhDmnpjJZMwwTBQK+1uc5N5wbmSZ3+N6GEdzYxwmKH8JKtGvXj9uMFHL0wJix8s1SnddNZ/Wi6D/PiPwGktwS4hu5Xdqbhmjhm7n0n6NmC2ZzOckIEuBcHfXC0+UyOnmNZblq5+PM0GPSe8s87x1jd0CV/pCM2uqb0QFVe0xehI1sMcm5+3Wjh1NGER5UuzBpcwStcItbtVkB1msae61l0xRbWD9BcNKwxsagUwmjh4YRU+aR2nZbB2Qa7E5b2Ri7LXBlvYv6oLYjHbbv6GxI7Qr5GGd5q2ZrbrzpzdNR/l7eGP2HEsRwEb/I+De+tdyRWCg+gwp8M0OEqma3AX5wuL9As+9xF6LUJbTzJF+a7iBjdveJhgpRyPN07GTvummJyb9QcKlM7/kTh2dbUGekgwqoVq8WyzXYqohSi/+djFtQ9KVujP4cggxYBhs7tdRrklHu+QL2GJIQOMcYFmEShT+pma/NqVpmvJUnQl05fEQcmN0iDEyNgv11YsGX5ScxlDbx78tgHPrAQFfcVHg9VMI6auz6ywzy1a4sMH2m3Q6+MqwCYTlvEs+njzzJ/bbwGl+aIfVCM3XvGVVXOwIKUFyeaNZ945Ud2B4dHdaUz/2g19xCTJaMf8ZuDqSqHGAD/TYq2jYRSWveo3uFTzStFYTAcVy4J37zC2JHgo+uziREu73jNTPJhRsz7zlAuXQgx3RyEoz0qkzqbAIBPuRRKWGjAd0PrBKitzeYmfUkAmyzrGgGPTtzCc7vQ0/aIwS++nBFpRKNw3OgyqRZvUKS/ZShCT4faSjO/Oe0ti8HgEtSg7DHdnDuT0mDlLX+5T/DMOZ8i762uuxD8T+jsv+/UFwgfK7t3srjgLOKRBnjset4mPUs4msG/zR3/xpnM+O+QYrMTFp45wZgQxZXYSbfJaCzLE8BLqPohKp5LLNiu+z6+vd5HHefEbfNC1+cjlJ0glqPqa432Tczk3VBPC2ntd6uDd+WFvTHVUZjUfG2Z6cOtpyeCPQDsb7kMSOKkfM2FoqMixJkEqr/abvYucTf4WvXG+nrmhX2GJlJ57IEkTlzdGTAQmEMRXw1yyVUP/RkWH4b16mehkXGcSeS6WprS5zmryK17qxBCkwEzmEN7+aTjB7Nc6Rjq7GuEOu/oQGu89X0uMwnKT4EkHDGHThar6LfJdWyLjtbYSoUY56sAKC65/7vCL1Q+39kzgUUzOel4H3vVmGf047fdSGk3OZfoy6zPYaS/ynKjpwsQdCh26bPIcA=",
+              "currency": "EUR",
+              "facilitated_booking_available": false,
+              "bags_price": {
+                "1": 312
+              },
+              "route": [
+                {
+                  "flyTo": "FRA",
+                  "mapIdto": "frankfurt_de",
+                  "airlines": [
+                    "LH"
+                  ],
+                  "pnr_count": 1,
+                  "fly_duration": "3h 0m",
+                  "has_airport_change": false,
+                  "distance": 594.05,
+                  "type_flights": [
+                    "GDS"
+                  ],
+                  "flyFrom": "BRQ",
+                  "dTimeUTC": 1536080400,
+                  "dTime": 1536087600,
+                  "cityFrom": "Brno",
+                  "mapIdfrom": "brno_cz",
+                  "id": "3974735809836368_0|3974735809836368_1|3974735809836368_2|3974735809836368_3",
+                  "countryTo": {
+                    "code": "DE",
+                    "name": "Germany"
+                  },
+                  "aTimeUTC": 1536091200,
+                  "cityTo": "Frankfurt",
+                  "transfers": [],
+                  "aTime": 1536098400,
+                  "route": [
+                    {
+                      "aTimeUTC": 1536084300,
+                      "refresh_timestamp": 1535438404,
+                      "bags_recheck_required": false,
+                      "return": 0,
+                      "latTo": 48.353889,
+                      "flight_no": 5290,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": "BM",
+                      "fare_basis": "S13CLSE3",
+                      "cityTo": "Munich",
+                      "mapIdfrom": "brno_cz",
+                      "lngFrom": 16.694444,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "BRQ",
+                      "id": "3974735809836368_0",
+                      "dTimeUTC": 1536080400,
+                      "equipment": "ER4",
+                      "mapIdto": "munich_de",
+                      "combination_id": "3974735809836368",
+                      "dTime": 1536087600,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "MUC",
+                      "source": "deprecated",
+                      "latFrom": 49.151389,
+                      "airline": "LH",
+                      "fare_classes": "S",
+                      "lngTo": 11.786111,
+                      "cityFrom": "Brno",
+                      "aTime": 1536091500,
+                      "guarantee": false,
+                      "last_seen": 1535438404
+                    },
+                    {
+                      "aTimeUTC": 1536091200,
+                      "refresh_timestamp": 1535438404,
+                      "bags_recheck_required": false,
+                      "return": 0,
+                      "latTo": 50.033056,
+                      "flight_no": 123,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": "LH",
+                      "fare_basis": "S13CLSE3",
+                      "cityTo": "Frankfurt",
+                      "mapIdfrom": "munich_de",
+                      "lngFrom": 11.786111,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "MUC",
+                      "id": "3974735809836368_1",
+                      "dTimeUTC": 1536087600,
+                      "equipment": "321",
+                      "mapIdto": "frankfurt_de",
+                      "combination_id": "3974735809836368",
+                      "dTime": 1536094800,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "FRA",
+                      "source": "deprecated",
+                      "latFrom": 48.353889,
+                      "airline": "LH",
+                      "fare_classes": "S",
+                      "lngTo": 8.570556,
+                      "cityFrom": "Munich",
+                      "aTime": 1536098400,
+                      "guarantee": false,
+                      "last_seen": 1535438404
+                    }
+                  ],
+                  "countryFrom": {
+                    "code": "CZ",
+                    "name": "Czechia"
+                  }
+                },
+                {
+                  "flyTo": "BCN",
+                  "mapIdto": "barcelona_es",
+                  "airlines": [
+                    "FR"
+                  ],
+                  "pnr_count": 1,
+                  "fly_duration": "1h 55m",
+                  "has_airport_change": false,
+                  "distance": 1094.81,
+                  "type_flights": [
+                    "lcc-FR"
+                  ],
+                  "flyFrom": "FRA",
+                  "dTimeUTC": 1536417000,
+                  "dTime": 1536424200,
+                  "cityFrom": "Frankfurt",
+                  "mapIdfrom": "frankfurt_de",
+                  "id": "3629488600055529_0",
+                  "countryTo": {
+                    "code": "ES",
+                    "name": "Spain"
+                  },
+                  "aTimeUTC": 1536423900,
+                  "cityTo": "Barcelona",
+                  "transfers": [],
+                  "aTime": 1536431100,
+                  "route": [
+                    {
+                      "aTimeUTC": 1536423900,
+                      "refresh_timestamp": 1535520742,
+                      "bags_recheck_required": false,
+                      "return": 0,
+                      "latTo": 41.296944,
+                      "flight_no": 1680,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": null,
+                      "fare_basis": "VLDISZP",
+                      "cityTo": "Barcelona",
+                      "mapIdfrom": "frankfurt_de",
+                      "lngFrom": 8.570556,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "FRA",
+                      "id": "3629488600055529_0",
+                      "dTimeUTC": 1536417000,
+                      "equipment": null,
+                      "mapIdto": "barcelona_es",
+                      "combination_id": "3629488600055529",
+                      "dTime": 1536424200,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "BCN",
+                      "source": "deprecated",
+                      "latFrom": 50.033056,
+                      "airline": "FR",
+                      "fare_classes": "V",
+                      "lngTo": 2.078333,
+                      "cityFrom": "Frankfurt",
+                      "aTime": 1536431100,
+                      "guarantee": false,
+                      "last_seen": 1535520741
+                    }
+                  ],
+                  "countryFrom": {
+                    "code": "DE",
+                    "name": "Germany"
+                  }
+                },
+                {
+                  "flyTo": "KEF",
+                  "mapIdto": "reykjavik_is",
+                  "airlines": [
+                    "D8"
+                  ],
+                  "pnr_count": 1,
+                  "fly_duration": "4h 30m",
+                  "has_airport_change": false,
+                  "distance": 2984.39,
+                  "type_flights": [
+                    "lcc-DY"
+                  ],
+                  "flyFrom": "BCN",
+                  "dTimeUTC": 1536845400,
+                  "dTime": 1536852600,
+                  "cityFrom": "Barcelona",
+                  "mapIdfrom": "barcelona_es",
+                  "id": "3810907627796485_0",
+                  "countryTo": {
+                    "code": "IS",
+                    "name": "Iceland"
+                  },
+                  "aTimeUTC": 1536861600,
+                  "cityTo": "Reykjavik",
+                  "transfers": [],
+                  "aTime": 1536861600,
+                  "route": [
+                    {
+                      "aTimeUTC": 1536861600,
+                      "refresh_timestamp": 1535508123,
+                      "bags_recheck_required": false,
+                      "return": 0,
+                      "latTo": 63.985,
+                      "flight_no": 5666,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": null,
+                      "fare_basis": "",
+                      "cityTo": "Reykjavik",
+                      "mapIdfrom": "barcelona_es",
+                      "lngFrom": 2.078333,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "BCN",
+                      "id": "3810907627796485_0",
+                      "dTimeUTC": 1536845400,
+                      "equipment": null,
+                      "mapIdto": "reykjavik_is",
+                      "combination_id": "3810907627796485",
+                      "dTime": 1536852600,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "KEF",
+                      "source": "deprecated",
+                      "latFrom": 41.296944,
+                      "airline": "D8",
+                      "fare_classes": "",
+                      "lngTo": -22.605556,
+                      "cityFrom": "Barcelona",
+                      "aTime": 1536861600,
+                      "guarantee": false,
+                      "last_seen": 1535508123
+                    }
+                  ],
+                  "countryFrom": {
+                    "code": "ES",
+                    "name": "Spain"
+                  }
+                },
+                {
+                  "flyTo": "ORD",
+                  "mapIdto": "chicago_il_us",
+                  "airlines": [
+                    "FI"
+                  ],
+                  "pnr_count": 1,
+                  "fly_duration": "6h 30m",
+                  "has_airport_change": false,
+                  "distance": 4730.41,
+                  "type_flights": [
+                    "lcc-FI"
+                  ],
+                  "flyFrom": "KEF",
+                  "dTimeUTC": 1537202700,
+                  "dTime": 1537202700,
+                  "cityFrom": "Reykjavik",
+                  "mapIdfrom": "reykjavik_is",
+                  "id": "3630587644248872_0",
+                  "countryTo": {
+                    "code": "US",
+                    "name": "United States"
+                  },
+                  "aTimeUTC": 1537226100,
+                  "cityTo": "Chicago",
+                  "transfers": [],
+                  "aTime": 1537208100,
+                  "route": [
+                    {
+                      "aTimeUTC": 1537226100,
+                      "refresh_timestamp": 1535517952,
+                      "bags_recheck_required": false,
+                      "return": 0,
+                      "latTo": 41.978611,
+                      "flight_no": 853,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": "FI",
+                      "fare_basis": "",
+                      "cityTo": "Chicago",
+                      "mapIdfrom": "reykjavik_is",
+                      "lngFrom": -22.605556,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "KEF",
+                      "id": "3630587644248872_0",
+                      "dTimeUTC": 1537202700,
+                      "equipment": "75W",
+                      "mapIdto": "chicago_il_us",
+                      "combination_id": "3630587644248872",
+                      "dTime": 1537202700,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "ORD",
+                      "source": "deprecated",
+                      "latFrom": 63.985,
+                      "airline": "FI",
+                      "fare_classes": "",
+                      "lngTo": -87.904722,
+                      "cityFrom": "Reykjavik",
+                      "aTime": 1537208100,
+                      "guarantee": false,
+                      "last_seen": 1535509770
+                    }
+                  ],
+                  "countryFrom": {
+                    "code": "IS",
+                    "name": "Iceland"
+                  }
+                },
+                {
+                  "flyTo": "LGA",
+                  "mapIdto": "new-york-city_ny_us",
+                  "airlines": [
+                    "UA"
+                  ],
+                  "pnr_count": 1,
+                  "fly_duration": "2h 6m",
+                  "has_airport_change": false,
+                  "distance": 1178.35,
+                  "type_flights": [
+                    "lcc-UA"
+                  ],
+                  "flyFrom": "ORD",
+                  "dTimeUTC": 1537621200,
+                  "dTime": 1537603200,
+                  "cityFrom": "Chicago",
+                  "mapIdfrom": "chicago_il_us",
+                  "id": "4023113167273385_0",
+                  "countryTo": {
+                    "code": "US",
+                    "name": "United States"
+                  },
+                  "aTimeUTC": 1537628760,
+                  "cityTo": "New York City",
+                  "transfers": [],
+                  "aTime": 1537614360,
+                  "route": [
+                    {
+                      "aTimeUTC": 1537628760,
+                      "refresh_timestamp": 1535518715,
+                      "bags_recheck_required": false,
+                      "return": 0,
+                      "latTo": 40.777222,
+                      "flight_no": 1166,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": "UA",
+                      "fare_basis": "",
+                      "cityTo": "New York City",
+                      "mapIdfrom": "chicago_il_us",
+                      "lngFrom": -87.904722,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "ORD",
+                      "id": "4023113167273385_0",
+                      "dTimeUTC": 1537621200,
+                      "equipment": "319",
+                      "mapIdto": "new-york-city_ny_us",
+                      "combination_id": "4023113167273385",
+                      "dTime": 1537603200,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "LGA",
+                      "source": "deprecated",
+                      "latFrom": 41.978611,
+                      "airline": "UA",
+                      "fare_classes": "",
+                      "lngTo": -73.8725,
+                      "cityFrom": "Chicago",
+                      "aTime": 1537614360,
+                      "guarantee": false,
+                      "last_seen": 1535518715
+                    }
+                  ],
+                  "countryFrom": {
+                    "code": "US",
+                    "name": "United States"
+                  }
+                },
+                {
+                  "flyTo": "GIG",
+                  "mapIdto": "rio-de-janeiro_rj_br",
+                  "airlines": [
+                    "O6"
+                  ],
+                  "pnr_count": 1,
+                  "fly_duration": "12h 45m",
+                  "has_airport_change": false,
+                  "distance": 7738.16,
+                  "type_flights": [
+                    "GDS"
+                  ],
+                  "flyFrom": "JFK",
+                  "dTimeUTC": 1538019000,
+                  "dTime": 1538004600,
+                  "cityFrom": "New York City",
+                  "mapIdfrom": "new-york-city_ny_us",
+                  "id": "3985731044980437_0|3985731044980437_1|3985731044980437_2|3985731044980437_3|3985731044980437_4",
+                  "countryTo": {
+                    "code": "BR",
+                    "name": "Brazil"
+                  },
+                  "aTimeUTC": 1538064900,
+                  "cityTo": "Rio de Janeiro",
+                  "transfers": [],
+                  "aTime": 1538054100,
+                  "route": [
+                    {
+                      "aTimeUTC": 1538054700,
+                      "refresh_timestamp": 1535360539,
+                      "bags_recheck_required": false,
+                      "return": 0,
+                      "latTo": -23.431944,
+                      "flight_no": 8501,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": "O6",
+                      "fare_basis": "ZLV28JIA",
+                      "cityTo": "São Paulo",
+                      "mapIdfrom": "new-york-city_ny_us",
+                      "lngFrom": -73.778889,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "JFK",
+                      "id": "3985731044980437_0",
+                      "dTimeUTC": 1538019000,
+                      "equipment": "332",
+                      "mapIdto": "sao-paulo_sp_br",
+                      "combination_id": "3985731044980437",
+                      "dTime": 1538004600,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "GRU",
+                      "source": "deprecated",
+                      "latFrom": 40.639722,
+                      "airline": "O6",
+                      "fare_classes": "Z",
+                      "lngTo": -46.469444,
+                      "cityFrom": "New York City",
+                      "aTime": 1538043900,
+                      "guarantee": false,
+                      "last_seen": 1535360539
+                    },
+                    {
+                      "aTimeUTC": 1538064900,
+                      "refresh_timestamp": 1535360539,
+                      "bags_recheck_required": false,
+                      "return": 0,
+                      "latTo": -22.8125,
+                      "flight_no": 6252,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": "O6",
+                      "fare_basis": "ZLV28JIA",
+                      "cityTo": "Rio de Janeiro",
+                      "mapIdfrom": "sao-paulo_sp_br",
+                      "lngFrom": -46.469444,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "GRU",
+                      "id": "3985731044980437_1",
+                      "dTimeUTC": 1538060700,
+                      "equipment": "320",
+                      "mapIdto": "rio-de-janeiro_rj_br",
+                      "combination_id": "3985731044980437",
+                      "dTime": 1538049900,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "GIG",
+                      "source": "deprecated",
+                      "latFrom": -23.431944,
+                      "airline": "O6",
+                      "fare_classes": "V",
+                      "lngTo": -43.248333,
+                      "cityFrom": "São Paulo",
+                      "aTime": 1538054100,
+                      "guarantee": false,
+                      "last_seen": 1535360539
+                    }
+                  ],
+                  "countryFrom": {
+                    "code": "US",
+                    "name": "United States"
+                  }
+                },
+                {
+                  "flyTo": "BRQ",
+                  "mapIdto": "brno_cz",
+                  "airlines": [
+                    "BM",
+                    "LX"
+                  ],
+                  "pnr_count": 2,
+                  "fly_duration": "16h 45m",
+                  "has_airport_change": false,
+                  "distance": 9963.13,
+                  "type_flights": [
+                    "GDS",
+                    "lcc-BM"
+                  ],
+                  "flyFrom": "GIG",
+                  "dTimeUTC": 1538414100,
+                  "dTime": 1538403300,
+                  "cityFrom": "Rio de Janeiro",
+                  "mapIdfrom": "rio-de-janeiro_rj_br",
+                  "id": "3940651029470107_0|3940651029470107_1|3641583224947986_0|3940651029470107_2|3940651029470107_3",
+                  "countryTo": {
+                    "code": "CZ",
+                    "name": "Czechia"
+                  },
+                  "aTimeUTC": 1538474400,
+                  "cityTo": "Brno",
+                  "transfers": [],
+                  "aTime": 1538481600,
+                  "route": [
+                    {
+                      "aTimeUTC": 1538454600,
+                      "refresh_timestamp": 1535360769,
+                      "bags_recheck_required": false,
+                      "return": 0,
+                      "latTo": 47.464722,
+                      "flight_no": 8097,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": "WK",
+                      "fare_basis": "TRCBR",
+                      "cityTo": "Zürich",
+                      "mapIdfrom": "rio-de-janeiro_rj_br",
+                      "lngFrom": -43.248333,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "GIG",
+                      "id": "3940651029470107_0",
+                      "dTimeUTC": 1538414100,
+                      "equipment": "343",
+                      "mapIdto": "zurich_ch",
+                      "combination_id": "3940651029470107",
+                      "dTime": 1538403300,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "ZRH",
+                      "source": "deprecated",
+                      "latFrom": -22.8125,
+                      "airline": "LX",
+                      "fare_classes": "T",
+                      "lngTo": 8.549167,
+                      "cityFrom": "Rio de Janeiro",
+                      "aTime": 1538461800,
+                      "guarantee": false,
+                      "last_seen": 1535360769
+                    },
+                    {
+                      "aTimeUTC": 1538460900,
+                      "refresh_timestamp": 1535360769,
+                      "bags_recheck_required": false,
+                      "return": 0,
+                      "latTo": 48.353889,
+                      "flight_no": 1100,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": "LX",
+                      "fare_basis": "TRCBR",
+                      "cityTo": "Munich",
+                      "mapIdfrom": "zurich_ch",
+                      "lngFrom": 8.549167,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "ZRH",
+                      "id": "3940651029470107_1",
+                      "dTimeUTC": 1538457300,
+                      "equipment": "CS1",
+                      "mapIdto": "munich_de",
+                      "combination_id": "3940651029470107",
+                      "dTime": 1538464500,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "MUC",
+                      "source": "deprecated",
+                      "latFrom": 47.464722,
+                      "airline": "LX",
+                      "fare_classes": "T",
+                      "lngTo": 11.786111,
+                      "cityFrom": "Zürich",
+                      "aTime": 1538468100,
+                      "guarantee": false,
+                      "last_seen": 1535360769
+                    },
+                    {
+                      "aTimeUTC": 1538474400,
+                      "refresh_timestamp": 1535514425,
+                      "bags_recheck_required": true,
+                      "return": 0,
+                      "latTo": 49.151389,
+                      "flight_no": 1733,
+                      "price": 1,
+                      "original_return": 0,
+                      "operating_carrier": "BM",
+                      "fare_basis": "",
+                      "cityTo": "Brno",
+                      "mapIdfrom": "munich_de",
+                      "lngFrom": 11.786111,
+                      "vehicle_type": "aircraft",
+                      "flyFrom": "MUC",
+                      "id": "3641583224947986_0",
+                      "dTimeUTC": 1538470500,
+                      "equipment": "ER3",
+                      "mapIdto": "brno_cz",
+                      "combination_id": "3641583224947986",
+                      "dTime": 1538477700,
+                      "fare_family": "",
+                      "found_on": "deprecated",
+                      "flyTo": "BRQ",
+                      "source": "deprecated",
+                      "latFrom": 48.353889,
+                      "airline": "BM",
+                      "fare_classes": "",
+                      "lngTo": 16.694444,
+                      "cityFrom": "Munich",
+                      "aTime": 1538481600,
+                      "guarantee": true,
+                      "last_seen": 1535468178
+                    }
+                  ],
+                  "countryFrom": {
+                    "code": "BR",
+                    "name": "Brazil"
+                  }
+                }
+              ],
+              "baglimit": {
+                "hand_width": null,
+                "hand_length": null,
+                "hold_weight": null,
+                "hand_height": null,
+                "hand_weight": null
+              }
+            }
+          ],
+          "_prev": null,
+          "ref_tasks": [],
+          "refresh": [],
+          "del": null,
+          "_results": 6,
+          "search_id": "200aa6a9-757d-439b-a187-31cd3242e010"
+        }
+        400:
+          body:
+            application/json:
+              example: |
+                {
+                  "message": "Here you will be notified of the error that occurred."
+                }
+        422:
+          body:
+            application/json:
+              example: |
+                {
+                  "message": [
+                    {
+                      "errors": [
+                        "Not recognized location: `XXX`"
+                      ],
+                      "param": "fly_to"
+                    }
+                  ]
+                }
