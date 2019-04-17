@@ -1,0 +1,96 @@
+/* TRIP INFO */
+
+.tripinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    padding: 24px 0;
+}
+
+.tripinfo-main {
+    padding: 0 48px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tripinfo-main .text {
+    padding-top: 36px;
+    padding-right: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.tripinfo-main .text h1 {
+    margin-bottom: 36px;
+    color: #0E6C8E;
+}
+
+.tripinfo-main .text p {
+    text-align: justify;
+}
+
+.tripinfo-main img {
+    width: 720px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.tripinfo-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.tripinfo-details h2 {
+    margin-bottom: 36px;
+    color: #0E6C8E;
+}
+
+.tripinfo-details-list {
+    display: flex;
+}
+
+.tripinfo-details-item {
+    width: 164px;
+    height: 164px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    padding: 36px 36px;
+    margin: 0 16px;
+}
+
+.tripinfo-details-item h3 {
+    text-align: center;
+    line-height: 1.25em;
+    color: #0E6C8E;
+    margin-bottom: 16px;
+}
+
+.tripinfo-details-item h4 {
+    text-align: center;
+    line-height: 1.25em;
+    color: #0E6C8E;
+}
+
+.tripinfo-details-item img {
+    width: 48x;
+    height: 48px;
+    filter: opacity(70%);
+    margin-bottom: 16px;
+}
+
+/* END TRIP INFO */

@@ -1,0 +1,200 @@
+/* USER PANEL */
+
+.user-panel {
+    margin-bottom: 48px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 2fr;
+    grid-template-rows: 500px;
+    grid-column-gap: 24px;
+}
+
+/* END USER PANEL */
+
+/* USER INFO PANEL */
+
+.user-info-panel {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-info-panel img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    margin-bottom: 32px;
+}
+
+.user-info-panel h2 {
+    color: #0E6C8E;
+    margin: 16px 0;
+}
+
+/* END USER INFO PANEL */
+
+/* USER UPDATE PANEL */
+
+.user-update-panel {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 48px 24px;
+}
+
+.user-update-panel a {
+    margin-top: 48px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.user-update-panel a:hover {
+    color: #0E6C8E;
+}
+
+.user-update-panel h2 {
+    text-align: center;
+    margin: 24px 0;
+    color: #0E6C8E;
+}
+
+.user-update-panel img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 12px 0;
+}
+
+.user-update-panel button {
+    margin: 12px 0;
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 1.125em;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #0E6C8E;
+    padding: 12px 20px;
+}
+
+.user-update-panel button:hover {
+    background-color: #0C5D7A;
+}
+
+.user-update-field {
+    display: block;
+    width: 240px;
+    height: 48px;
+    margin: 12px 0;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333333;
+    padding-left: 12px;
+}
+
+.user-update-field::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.user-update-field:focus {
+    border: 2px solid #0E6C8E;
+}
+
+/* END USER UPDATE PANEL */
+
+/* USER TRIP PANEL */
+
+.user-trip-panel {
+    padding: 48px 24px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user-trip-panel h2 {
+    text-align: center;
+    margin: 24px 0;
+    color: #0E6C8E;
+}
+
+.user-trip-container {
+    overflow-y: scroll;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-trip-container::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.user-trip-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+.user-trip-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 24px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    margin: 8px;
+    margin-right: 16px;
+}
+
+.user-trip-item .location {
+    color: #0E6C8E;
+    margin: 0 8px;
+}
+
+.user-trip-item .date {
+    margin: 0 8px;
+}
+
+.user-trip-item .price {
+    color: #99E000;
+    margin: 0 8px;
+}
+
+.user-trip-item .notification {
+    margin: 0 8px;
+    font-weight: bold;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.user-trip-item .notification:hover {
+    opacity: 1;
+}
+
+.user-trip-item .delete {
+    font-size: 34px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin: 0 8px;
+}
+
+.user-trip-item .delete:hover {
+    color: rgb(206, 38, 38);
+}
+
+/* END END USER TRIP PANEL */

@@ -1,0 +1,68 @@
+/* TRIP LIST*/
+
+.triplist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.triplist-item {
+    background: url(../img/london.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 96px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.triplist-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 48px;
+    transform: translateY(48px);
+    padding: 48px 36px;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.triplist-item-content>h1 {
+    color: #0E6C8E;
+    margin: 16px 0;
+}
+
+.triplist-item-content>p {
+    text-align: justify;
+    margin: 8px 0;
+}
+
+.triplist-item-content>a {
+    position: relative;
+    display: block;
+    margin-top: 24px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.25em;
+    padding: 16px 48px;
+    color: #0E6C8E;
+    border: solid 3px #0E6C8E;
+    border-radius: 10px;
+}
+
+.triplist-item-content>a:hover {
+    color: white;
+    background-color: #0E6C8E;
+}
+
+/* END TRIP LIST */

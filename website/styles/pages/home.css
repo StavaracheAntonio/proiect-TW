@@ -1,0 +1,15 @@
+/* HOME */
+
+#home {
+    margin: 0 auto;
+    width: 75%;
+    margin-bottom: 124px;
+    position: relative;
+    transform: translateY(-48px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* END HOME */
