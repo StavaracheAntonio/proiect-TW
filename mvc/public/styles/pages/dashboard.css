@@ -1,0 +1,31 @@
+/* DASHBOARD */
+
+#dashboard {
+    margin: 0 auto;
+    width: 75%;
+    margin-bottom: 124px;
+    position: relative;
+    transform: translateY(-48px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#dashboard .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 48px;
+    padding: 48px 0;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#dashboard .card h1 {
+    color: #0E6C8E;
+}
+
+/* END DASHBOARD */

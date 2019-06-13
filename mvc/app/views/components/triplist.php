@@ -1,0 +1,2 @@
+<div id="triplist">
+</div>

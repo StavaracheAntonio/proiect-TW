@@ -1,0 +1,127 @@
+/* SEARCH-BAR */
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 48px;
+    padding: 24px 0;
+    background-color: white;
+    border-radius: 10pt;
+}
+
+.search-bar h3 {
+    color: #0E6C8E;
+    margin-bottom: 48px;
+}
+
+.search-categories {
+    width: 80%;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.search-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.search-category img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.unselected-category {
+    opacity: 0.5;
+}
+
+.selected-category {
+    opacity: 1;
+}
+
+.search-category:hover>img {
+    border: 3px solid #0E6C8E;
+}
+
+.search-category>h4 {
+    text-align: center;
+    font-weight: bold;
+    color: #0E6C8E;
+    margin-top: 8px;
+}
+
+.search-filters {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.search-filter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: baseline;
+}
+
+.search-filter-item .text {
+    display: flex;
+    align-items: baseline;
+}
+
+.search-filter-item .text h3 {
+    color: #0E6C8E;
+    margin-bottom: 16px;
+}
+
+.search-filter-item .text h4 {
+    font-weight: bold;
+    color: #0E6C8E;
+    margin-left: 24px;
+}
+
+.search-filter-item input[type="text"] {
+    width: 148px;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #0E6C8E;
+    padding: 8px;
+    padding-left: 16px;
+    border-bottom: solid 2px #0E6C8E;
+}
+
+.search-filter-item .search-filter-item input[type="text"]::placeholder {
+    color: #b6b6b6;
+}
+
+.search-filter-item input[type="text"]:focus::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.search-filter-item input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 16px;
+    margin-top: 16px;
+    background-color: #e4e4e4;
+    border-radius: 1000px;
+}
+
+.search-filter-item input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 1000px;
+    background-color: #0E6C8E;
+    cursor: pointer;
+}
+
+/* END SEARCH-BAR */
